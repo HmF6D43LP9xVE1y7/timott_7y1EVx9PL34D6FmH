@@ -83,77 +83,100 @@
 body {
     background-color: rgba(255, 255, 255, 1);
 }
-svg {
-    height: 2rem; /* 35px */
-    width: 2rem; /* 35px */
-    stroke: black;
-    stroke-width: .02rem; /* .35px */
+.fs2 {
+    font-size: 2rem;
 }
-.bottomleft,
-.bottomright,
-.topleft,
-.topright {
+.fs2h {
+    font-size: 2rem;
+    height: 2rem;
+    padding: 1rem 0 0 0;
+}
+.fs1 {
+    font-size: 1rem;
+    padding-top: 2rem;
+}
+.underline {
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-color: black;
+    -moz-text-decoration-style: solid;
+    -moz-text-decoration-color: black;
+}
+.topleft, .topright, .centerleft, .centerright, .bottomleft, .bottomright {
     position: fixed;
+    height: 2rem;
     z-index: 2;
 }
-.topleft {
-    top: 2rem; /* 32px */
-    left: 2rem; /* 32px */
+.topleft, .topright {
+    transform: translateY(-.6rem);
 }
-.topright {
-    top: 2rem; /* 35px */
-    right: 2rem; /* 35px */
-}
-.centerleft,
-.centerright {
-    position: absolute;
+.centerleft, .centerright {
     top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
+.topleft {
+    top: 2rem;
+    left: 2rem;
+}
+.topright {
+    top: 2rem;
+    right: 2rem;
+}
 .centerleft {
-    left: 2rem; /* 35px */
+    left: 2rem;
 }
 .centerright {
-    right: 2rem; /* 35px */
+    right: 2rem;
 }
 .bottomleft {
-    bottom: 2rem; /* 35px */
-    left: 2rem; /* 32.5px */
+    bottom: 2rem;
+    left: 2rem;
 }
 .bottomright {
-    bottom: 2rem; /* 35px */
-    right: 2rem; /* 30px */
+    bottom: 2rem;
+    right: 2rem;
+    position: absolute;
+    transform: translateY(.26rem);
 }
-.nav,
-.size35 {
-    pointer-events: all;
-    display: block;
-    font-size: 2rem; /* 30px */
-    height: 0; /* conflict, else use fit-content */
-}
-.size15 {
-    height: fit-content;
-    font-size: 1rem; /* 15px */
-    height: 0; /* conflict, else use fit-content */
-}
-.size35::after, .size15::after {
-    display: inline-block;
-    content: "";
-}
-.size35::after {
-    height: 2rem;
-}
-.size15::after {
-    height: 1rem;
+svg {
+    width: 2rem;
+    stroke: black;
+    stroke-width: .02rem;
 }
 .responsive {
-    max-width: 28.75rem; /* 460px */
+    max-width: 30.55rem;
 }
 .clear {
     clear: both;
 }
-nav, a, svg {
+@media screen and (max-width: 32rem) {
+    .mainInfo {
+        margin: calc(4rem - .6rem) 2rem calc(6rem - 1rem) 2rem;
+    }
+}
+@media screen and (min-width: 32rem) {
+    .mainInfo {
+        margin: calc(4rem - .6rem) 2rem calc(6rem - 1rem) 2rem;
+        overflow: hidden;
+    }
+    .responsive {
+        float: left;
+    }
+}
+@media screen and (min-width: 36.55rem) {
+    .pr {
+        padding-right: 2rem;
+    }
+}
+
+
+
+
+
+
+
+.navigation, a, svg {
     -webkit-transition: opacity .3s ease;
     -moz-transition: opacity .3s ease;
     -ms-transition: opacity .3s ease;
@@ -161,7 +184,7 @@ nav, a, svg {
     transition: opacity .3s ease;
     pointer-events: all;
 }
-nav:hover, a:hover, svg:hover {
+.navigation:hover, a:hover, svg:hover {
     opacity: .3;
     cursor: pointer;
 }
@@ -204,7 +227,7 @@ a {
     width: calc(100vw - 4rem); /* - 140px */
     height: auto;
 }
-@media screen and (max-width: 37.5rem) { /* 600px */
+@media screen and (max-width: 32rem) { /* 600px */
     .gridContainer {
         grid-template-columns: repeat(14, calc(calc(100vw - 4rem) / 14)); /* - 70px */
         grid-template-rows: repeat(253, calc(calc(100vw - 4rem) / 14)); /* - 70px */
@@ -326,7 +349,7 @@ a {
         transform: translateY(2rem); /* 35px */
     }
 }
-@media screen and (min-width: 37.5625rem) { /* 601px */
+@media screen and (min-width: 32rem) { /* 601px */
     .gridContainer {
         grid-template-columns: repeat(42, calc(calc(100vw - 4rem) / 42)); /* - 70px */
         grid-template-rows: repeat(140, calc(calc(100vw - 4rem) / 42)); /* - 70px */
@@ -377,6 +400,7 @@ a {
         line-height: 0px; /* 3rem */
         color: rgba(0, 0, 0, 1);
         font-weight: 600;
+        opacity: .35;
     }
     .contFont::after, .contFontSmall::after {
         content: "";
@@ -598,9 +622,7 @@ a {
 
 
 
-/* DEBUG *//*
+/* DEBUG */
 * {
-    background-color: rgba(255, 0, 0, .1) !important;
-    /*
-    background-color: #FD3C04 !important;*/
+    background-color: rgba(255, 0, 0, .2);
 }
