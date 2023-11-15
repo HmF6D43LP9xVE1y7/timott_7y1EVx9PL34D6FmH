@@ -93,7 +93,7 @@ body {
 }
 .fs1 {
     font-size: 1rem;
-    padding-top: 2rem;
+    padding: 2rem 0 0 0;
 }
 .underline {
     text-decoration: underline;
@@ -101,6 +101,24 @@ body {
     text-decoration-color: black;
     -moz-text-decoration-style: solid;
     -moz-text-decoration-color: black;
+}
+svg {
+    position: absolute;
+    width: 2rem;
+    stroke: black;
+    stroke-width: .02rem;
+}
+a, svg {
+    -webkit-transition: opacity .3s ease;
+    -moz-transition: opacity .3s ease;
+    -ms-transition: opacity .3s ease;
+    -o-transition: opacity .3s ease;
+    transition: opacity .3s ease;
+    pointer-events: all;
+}
+a:hover, svg:hover {
+    opacity: .3;
+    cursor: pointer;
 }
 .topleft, .topright, .centerleft, .centerright, .bottomleft, .bottomright {
     position: fixed;
@@ -136,13 +154,10 @@ body {
 .bottomright {
     bottom: 2rem;
     right: 2rem;
-    position: absolute;
     transform: translateY(.26rem);
 }
-svg {
-    width: 2rem;
-    stroke: black;
-    stroke-width: .02rem;
+.main {
+    margin: calc(6rem - .6rem) 2rem calc(6rem - 1rem) 2rem;
 }
 .responsive {
     max-width: 30.55rem;
@@ -150,23 +165,30 @@ svg {
 .clear {
     clear: both;
 }
-@media screen and (max-width: 32rem) {
-    .mainInfo {
-        margin: calc(4rem - .6rem) 2rem calc(6rem - 1rem) 2rem;
+@media screen and (max-width: 48rem) {
+
+}
+@media screen and (min-width: 48rem) {
+
+}
+@media screen and (max-width: 67.1rem) {
+    .responsiveLeft {
+        padding: 0;
+    }
+    .responsiveRight {
+        padding: 2rem 0 0 0;
+        clear: both;
     }
 }
-@media screen and (min-width: 32rem) {
-    .mainInfo {
-        margin: calc(4rem - .6rem) 2rem calc(6rem - 1rem) 2rem;
-        overflow: hidden;
-    }
+@media screen and (min-width: 67.1rem) {
     .responsive {
         float: left;
     }
-}
-@media screen and (min-width: 36.55rem) {
-    .pr {
-        padding-right: 2rem;
+    .responsiveLeft {
+        padding: 0 2rem 0 0;
+    }
+    .responsiveRight {
+        padding: 0;
     }
 }
 
@@ -174,20 +196,115 @@ svg {
 
 
 
+.parallax {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 18.75rem;
+    -webkit-perspective: 18.75rem;
+    perspective-origin: 50%;
+    -webkit-perspective-origin: 50%;    
+}
+.parallaxGroup {
+    margin: calc(6rem - .6rem) 2rem calc(6rem - 1rem) 2rem;
+    position: relative;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+}
+.parallaxLayer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    perspective-origin: 100%;
+    -webkit-perspective-origin: 100%;
+}
+.parallaxLayerBase {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+}
+.parallaxLayerForeground {
+    line-height: 4rem;
+    height: 2rem;
+    background-color: rgba(0, 255, 0, .2);
+    transform: translateZ(90px) scale(.7);
+    -webkit-transform: translateZ(90px) scale(.7);
+}
+.parallaxFont {
+    width: calc(100vw - 4rem);
+    font-weight: 300;
+    color: black;
+    text-align: left;
+    position: absolute;
+    /*
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    */
+}
+
+/* possible to copy gridContainer into parallaxFont for parallaxing images, onhover works flawlessly and could even be animated to fade a blur effect between layers */
+
+#parallaxTitleA {
+    width: inherit;
+
+    top: calc(calc(calc(100vw - 4rem) / 42) * 37); /* margin top in grid squares */
+    left: calc(calc(calc(100vw - 4rem) / 42) * 30);
+    height: calc(calc(calc(100vw - 4rem) / 42) * 2); /* height in grid squares */
+
+    font-size: calc(calc(calc(100vw - 4rem) / 42) * 1.8); /* font size in grid squares */
+    line-height: calc(calc(calc(100vw - 4rem) / 42) * 2); /* line height in grid squares */
+
+    /* optional line height correction */
+    transform: translateY(calc(calc(calc(100vw - 4rem) / 42) * .35));
+}
+#parallaxContentA {
+    width: calc(calc(calc(100vw - 4rem) / 42) * 26); /* width in grid squares */
+
+    top: calc(calc(calc(100vw - 4rem) / 42) * 40); /* margin top in grid squares */
+    left: calc(calc(calc(100vw - 4rem) / 42) * 16);
+    height: calc(calc(calc(100vw - 4rem) / 42) * 4); /* height in grid squares */
+
+    font-size: calc(calc(calc(100vw - 4rem) / 42) * .9); /* font size in grid squares */
+    line-height: calc(calc(calc(100vw - 4rem) / 42) * 1); /* line height in grid squares */
+
+    /* optional line height correction */
+    transform: translateY(calc(calc(calc(100vw - 4rem) / 42) * .175));
+}
+#parallaxTitleB {
+    width: inherit;
+
+    top: calc(calc(calc(100vw - 4rem) / 42) * 153); /* margin top in grid squares */
+    height: calc(calc(calc(100vw - 4rem) / 42) * 2); /* height in grid squares */
+
+    font-size: calc(calc(calc(100vw - 4rem) / 42) * 1.8); /* font size in grid squares */
+    line-height: calc(calc(calc(100vw - 4rem) / 42) * 2); /* line height in grid squares */
+
+    /* optional line height correction */
+    transform: translateY(calc(calc(calc(100vw - 4rem) / 42) * .35));
+}
+#parallaxContentB {
+    width: calc(calc(calc(100vw - 4rem) / 42) * 24); /* width in grid squares */
+
+    top: calc(calc(calc(100vw - 4rem) / 42) * 156); /* margin top in grid squares */
+    left: calc(calc(calc(100vw - 4rem) / 42) * 2);
+    height: calc(calc(calc(100vw - 4rem) / 42) * 9); /* height in grid squares */
+
+    font-size: calc(calc(calc(100vw - 4rem) / 42) * .9); /* font size in grid squares */
+    line-height: calc(calc(calc(100vw - 4rem) / 42) * 1); /* line height in grid squares */
+
+    /* optional line height correction */
+    transform: translateY(calc(calc(calc(100vw - 4rem) / 42) * .175));
+}
 
 
-.navigation, a, svg {
-    -webkit-transition: opacity .3s ease;
-    -moz-transition: opacity .3s ease;
-    -ms-transition: opacity .3s ease;
-    -o-transition: opacity .3s ease;
-    transition: opacity .3s ease;
-    pointer-events: all;
-}
-.navigation:hover, a:hover, svg:hover {
-    opacity: .3;
-    cursor: pointer;
-}
+
+
+
+
+
 a {
     width: fit-content;
 }
@@ -221,11 +338,8 @@ a {
     cursor: pointer;
 }
 .gridContainer {
-    z-index: 0;
     display: grid;
-    margin: 6rem 2rem; /* 105px 35px */
-    width: calc(100vw - 4rem); /* - 140px */
-    height: auto;
+    height: calc(calc(calc(calc(100vw - 4rem) / 42) * 140) + 5.5rem);;
 }
 @media screen and (max-width: 32rem) { /* 600px */
     .gridContainer {
