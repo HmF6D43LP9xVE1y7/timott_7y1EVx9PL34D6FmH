@@ -142,7 +142,7 @@ a:hover, svg:hover {
 
 @media screen and (max-width: 48rem) {
     .fs2 {
-        font-size: calc(calc(100vw / 16) * .9);
+        font-size: calc(calc(100vw / 16) * 1.8); /* 1.5 x .9 */
     }
     svg {
         width: calc(calc(100vw / 16) * 1);
@@ -155,10 +155,10 @@ a:hover, svg:hover {
         right: calc(calc(100vw / 16) * 1.5);
     }
     .topleft, .topright, .centerleft, .centerright, .bottomleft, .bottomright {
-        height: calc(calc(100vw / 16) * 1);
+        height: calc(calc(100vw / 16) * 2);
     }
     .topleft, .topright {
-        transform: translateY(calc(calc(100vw / 16) * -.3));
+        transform: translateY(calc(calc(100vw / 16) * -.55));
     }
     .topleft {
         top: calc(calc(100vw / 16) * 1);
@@ -210,7 +210,7 @@ a:hover, svg:hover {
         height: calc(calc(100vw / 44) * 1);
     }
     .topleft, .topright {
-        transform: translateY(calc(calc(100vw / 44) * -.3));
+        transform: translateY(calc(calc(100vw / 44) * -.275));
     }
     .topleft {
         top: calc(calc(100vw / 44) * 1);
