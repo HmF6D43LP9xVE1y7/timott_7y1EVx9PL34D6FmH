@@ -142,10 +142,10 @@ a:hover, svg:hover {
 
 @media screen and (max-width: 48rem) {
     .fs2 {
-        font-size: calc(calc(100vw / 16) * 1.8); /* 1.5 x .9 */
+        font-size: calc(calc(100vw / 16) * .9); /* 1.5 x .9 */
     }
     svg {
-        width: calc(calc(100vw / 16) * 1);
+        width: calc(calc(100vw / 16) * 1.5);
         stroke-width: calc(calc(100vw / 16) * .01);
     }
     #svgMail {
@@ -182,6 +182,43 @@ a:hover, svg:hover {
         bottom: calc(calc(100vw / 16) * 1);
         right: calc(calc(100vw / 16) * 1);
         transform: translateY(calc(calc(100vw / 16) * .13))
+    }
+
+
+
+    .parallaxTitle {
+        font-size: calc(calc(100vw / 16) * 1.8); /* font size in grid squares */
+        line-height: calc(calc(100vw / 16) * 2); /* line height in grid squares */
+        /* optional line height correction */
+        transform: translateY(calc(calc(100vw / 16) * .35));
+    }
+    .parallaxContent {
+        font-size: calc(calc(100vw / 16) * .9); /* font size in grid squares */
+        line-height: calc(calc(100vw / 16) * 1); /* line height in grid squares */
+        height: calc(calc(100vw / 16) * 2); /* height in grid squares */
+        /* optional line height correction */
+        transform: translateY(calc(calc(100vw / 16) * .175));
+        text-indent: calc(calc(100vw / 16) * 2);
+    }
+    #parallaxTitleA {
+        top: calc(calc(100vw / 16) * 48); /* margin top in grid squares */
+        left: calc(calc(100vw / 16) * 1);
+    }
+    #parallaxContentA {
+        width: calc(calc(100vw / 16) * 14); /* width in grid squares */
+        top: calc(calc(100vw / 16) * 51); /* margin top in grid squares */
+        left: calc(calc(100vw / 16) * 1);
+        height: calc(calc(100vw / 16) * 4); /* height in grid squares */
+    }
+    #parallaxTitleB {
+        top: calc(calc(100vw / 16) * 226); /* margin top in grid squares */
+        left: calc(calc(100vw / 16) * 3);
+    }
+    #parallaxContentB {
+        width: calc(calc(100vw / 16) * 14); /* width in grid squares */
+        top: calc(calc(100vw / 16) * 231); /* margin top in grid squares */
+        left: calc(calc(100vw / 16) * 1);
+        height: calc(calc(100vw / 16) * 9); /* height in grid squares */
     }
 }
 
@@ -234,6 +271,42 @@ a:hover, svg:hover {
         bottom: calc(calc(100vw / 44) * 1);
         right: calc(calc(100vw / 44) * 1);
         transform: translateY(calc(calc(100vw / 44) * .13))
+    }
+
+
+
+    .parallaxTitle {
+        font-size: calc(calc(100vw / 44) * 1.8); /* font size in grid squares */
+        line-height: calc(calc(100vw / 44) * 2); /* line height in grid squares */
+        /* optional line height correction */
+        transform: translateY(calc(calc(100vw / 44) * .35));
+    }
+    .parallaxContent {
+        font-size: calc(calc(100vw / 44) * .9); /* font size in grid squares */
+        line-height: calc(calc(100vw / 44) * 1); /* line height in grid squares */
+        height: calc(calc(100vw / 44) * 2); /* height in grid squares */
+        /* optional line height correction */
+        transform: translateY(calc(calc(100vw / 44) * .175));
+    }
+    #parallaxTitleA {
+        top: calc(calc(100vw / 44) * 40); /* margin top in grid squares */
+        left: calc(calc(100vw / 44) * 31);
+    }
+    #parallaxContentA {
+        width: calc(calc(100vw / 44) * 26); /* width in grid squares */
+        top: calc(calc(100vw / 44) * 43); /* margin top in grid squares */
+        left: calc(calc(100vw / 44) * 17);
+        height: calc(calc(100vw / 44) * 4); /* height in grid squares */
+    }
+    #parallaxTitleB {
+        top: calc(calc(100vw / 44) * 156); /* margin top in grid squares */
+        left: calc(calc(100vw / 44) * 1);
+    }
+    #parallaxContentB {
+        width: calc(calc(100vw / 44) * 24); /* width in grid squares */
+        top: calc(calc(100vw / 44) * 159); /* margin top in grid squares */
+        left: calc(calc(100vw / 44) * 3);
+        height: calc(calc(100vw / 44) * 9); /* height in grid squares */
     }
 }
 @media screen and (max-width: 67.1rem) {
@@ -302,9 +375,6 @@ a:hover, svg:hover {
     /*
     width: calc(100vw - 4rem);
     */
-    font-weight: 300;
-    color: black;
-    text-align: left;
     position: absolute;
     /*
     left: 50%;
@@ -330,60 +400,6 @@ a:hover, svg:hover {
     background-color: rgba(255, 0, 0, .2);
 }
 
-/* possible to copy gridContainer into parallaxFont for parallaxing images, onhover works flawlessly and could even be animated to fade a blur effect between layers */
-
-#parallaxTitleA {
-    width: inherit;
-
-    top: calc(calc(100vw / 44) * 40); /* margin top in grid squares */
-    left: calc(calc(100vw / 44) * 31);
-    height: calc(calc(100vw / 44) * 2); /* height in grid squares */
-
-    font-size: calc(calc(100vw / 44) * 1.8); /* font size in grid squares */
-    line-height: calc(calc(100vw / 44) * 2); /* line height in grid squares */
-
-    /* optional line height correction */
-    transform: translateY(calc(calc(100vw / 44) * .35));
-}
-#parallaxContentA {
-    width: calc(calc(100vw / 44) * 26); /* width in grid squares */
-
-    top: calc(calc(100vw / 44) * 43); /* margin top in grid squares */
-    left: calc(calc(100vw / 44) * 17);
-    height: calc(calc(100vw / 44) * 4); /* height in grid squares */
-
-    font-size: calc(calc(100vw / 44) * .9); /* font size in grid squares */
-    line-height: calc(calc(100vw / 44) * 1); /* line height in grid squares */
-
-    /* optional line height correction */
-    transform: translateY(calc(calc(100vw / 44) * .175));
-}
-#parallaxTitleB {
-    width: inherit;
-
-    top: calc(calc(100vw / 44) * 156); /* margin top in grid squares */
-    left: calc(calc(100vw / 44) * 1);
-    height: calc(calc(100vw / 44) * 2); /* height in grid squares */
-
-    font-size: calc(calc(100vw / 44) * 1.8); /* font size in grid squares */
-    line-height: calc(calc(100vw / 44) * 2); /* line height in grid squares */
-
-    /* optional line height correction */
-    transform: translateY(calc(calc(100vw / 44) * .35));
-}
-#parallaxContentB {
-    width: calc(calc(100vw / 44) * 24); /* width in grid squares */
-
-    top: calc(calc(100vw / 44) * 159); /* margin top in grid squares */
-    left: calc(calc(100vw / 44) * 3);
-    height: calc(calc(100vw / 44) * 9); /* height in grid squares */
-
-    font-size: calc(calc(100vw / 44) * .9); /* font size in grid squares */
-    line-height: calc(calc(100vw / 44) * 1); /* line height in grid squares */
-
-    /* optional line height correction */
-    transform: translateY(calc(calc(100vw / 44) * .175));
-}
 
 
 
@@ -425,121 +441,125 @@ a {
 }
 .gridContainer {
     display: grid;
-    height: calc(calc(calc(100vw / 44) * 140) + 5.5rem);
 }
 @media screen and (max-width: 48rem) { /* 600px */
     .gridContainer {
-        grid-template-columns: repeat(16, calc(100vw / 16)); /* - 70px */
-        grid-template-rows: repeat(253, calc(100vw / 16)); /* - 70px */
+        grid-template-columns: repeat(16, calc(100vw / 16));
+        grid-template-rows: repeat(259, calc(100vw / 16));
+        height: calc(calc(100vw / 16) * 259);
     }
     .gridItem000 {
-        grid-column: 3 / 13;
-        grid-row: 1 / 15;
+        grid-column: 4 / 14;
+        grid-row: 4 / 18;
         background: url("../assets/asset_000.jpg");
     }
     .gridItem002 {
-        grid-column: 8 / 15;
-        grid-row: 17 / 27;
+        grid-column: 9 / 16;
+        grid-row: 20 / 30;
         background: url("../assets/asset_002.jpg");
     }
+    /*
     .gridItem001 {
-        grid-column: 1 / 15;
-        grid-row: 29 / 39;
+        grid-column: 2 / 16;
+        grid-row: 32 / 42;
         background: url("../assets/asset_001.jpg");
     }
+    */
     .gridItem003 {
-        grid-column: 3 / 13;
-        grid-row: 44 / 51;
+        grid-column: 4 / 14;
+        grid-row: 47 / 54;
         background: url("../assets/asset_006.jpg");
     }
     .gridItem004 {
-        grid-column: 1 / 15;
-        grid-row: 53 / 63;
+        grid-column: 2 / 16;
+        grid-row: 56 / 66;
         background: url("../assets/asset_007.jpg");
     }
     .gridItem007 {
-        grid-column: 5 / 15;
-        grid-row: 65 / 72;
+        grid-column: 6 / 16;
+        grid-row: 68 / 75;
         background: url("../assets/asset_008b.jpg");
     }
     .gridItem005 {
-        grid-column: 1 / 11;
-        grid-row: 74 / 81;
+        grid-column: 2 / 12;
+        grid-row: 77 / 84;
         background: url("../assets/asset_009.jpg");
     }
     .gridItem006 {
-        grid-column: 3 / 13;
-        grid-row: 83 / 90;
+        grid-column: 4 / 14;
+        grid-row: 86 / 93;
         background: url("../assets/asset_010b.jpg");
     }
     .gridItem008 {
-        grid-column: 1 / 15;
-        grid-row: 92 / 102;
+        grid-column: 2 / 16;
+        grid-row: 95 / 105;
         background: url("../assets/asset_011b.jpg");
     }
     .gridItem009 {
-        grid-column: 1 / 11;
-        grid-row: 104 / 111;
+        grid-column: 2 / 12;
+        grid-row: 107 / 114;
         background: url("../assets/asset_015.jpg");
     }
     .gridItem010 {
-        grid-column: 5 / 15;
-        grid-row: 113 / 120;
+        grid-column: 6 / 16;
+        grid-row: 116 / 123;
         background: url("../assets/asset_012b.jpg");
     }
     .gridItem011 {
-        grid-column: 3 / 13;
-        grid-row: 122 / 129;
+        grid-column: 4 / 14;
+        grid-row: 125 / 132;
         background: url("../assets/asset_013b.jpg");
     }
     .gridItem012 {
-        grid-column: 1 / 15;
-        grid-row: 131 / 141;
+        grid-column: 2 / 16;
+        grid-row: 134 / 144;
         background: url("../assets/asset_014.jpg");
     }
     .gridItem013 {
-        grid-column: 3 / 13;
-        grid-row: 143 / 150;
+        grid-column: 4 / 14;
+        grid-row: 146 / 153;
         background: url("../assets/asset_016.jpg");
     }
+    /*
     .gridItem014 {
-        grid-column: 1 / 15;
-        grid-row: 155 / 165;
+        grid-column: 2 / 16;
+        grid-row: 158 / 168;
         background: url("../assets/asset_020.jpg");
     }
     .gridItem015 {
-        grid-column: 5 / 15;
-        grid-row: 167 / 181;
+        grid-column: 6 / 16;
+        grid-row: 170 / 184;
         background: url("../assets/asset_021.jpg");
     }
     .gridItem016 {
-        grid-column: 1 / 11;
-        grid-row: 183 / 190;
+        grid-column: 2 / 12;
+        grid-row: 186 / 193;
         background: url("../assets/asset_022.jpg");
     }
+    */
     .gridItem017 {
-        grid-column: 1 / 15;
-        grid-row: 195 / 205;
+        grid-column: 2 / 16;
+        grid-row: 198 / 208;
         background: url("../assets/asset_023.jpg");
     }
     .gridItem018 {
-        grid-column: 3 / 13;
-        grid-row: 207 / 214;
+        grid-column: 4 / 14;
+        grid-row: 210 / 217;
         background: url("../assets/asset_024.jpg");
     }
     .gridItem020 {
-        grid-column: 1 / 11;
-        grid-row: 219 / 233;
+        grid-column: 2 / 12;
+        grid-row: 222 / 236;
         background: url("../assets/asset_026.jpg");
     }
     .gridItem019 {
-        grid-column: 5 / 15;
-        grid-row: 235 / 242;
+        grid-column: 6 / 16;
+        grid-row: 238 / 245;
         background: url("../assets/asset_025.jpg");
     }
     .gridItem021 {
-        grid-column: 1 / 15;
-        grid-row: 244 / 254;
+        grid-column: 2 / 16;
+        grid-row: 247 / 257;
         background: url("../assets/asset_027.jpg");
     }
     [class^="gridItem"] {
@@ -551,8 +571,8 @@ a {
 }
 @media screen and (min-width: 48rem) { /* 601px */
     .gridContainer {
-        grid-template-columns: repeat(44, calc(100vw / 44)); /* - 70px */
-        grid-template-rows: repeat(146, calc(100vw / 44)); /* - 70px */
+        grid-template-columns: repeat(44, calc(100vw / 44));
+        grid-template-rows: repeat(146, calc(100vw / 44));
         height: calc(calc(100vw / 44) * 146);
     }
     .gridItem000 {
