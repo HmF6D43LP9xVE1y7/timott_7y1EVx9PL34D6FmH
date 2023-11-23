@@ -121,15 +121,62 @@ a:hover, svg:hover {
 }
 .centerleft, .centerright {
     top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
     transform: translateY(-50%);
 }
 .gridContainer {
     display: grid;
 }
+[class^="gridItem"] {
+    background-repeat: round !important;
+    background-size: cover !important;
+    cursor: pointer !important;
+}
+.lightbox {
+    background-color: white;
+    position: fixed;
+    display: none;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+}
+.lightbox img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 4;
+}
+.lightboxSrc {
+    cursor: pointer;
+}
 
 
-
+.observed {
+    -webkit-transition: background-color 0.3s ease, transform 1s ease, opacity 1s ease;
+    -moz-transition: background-color 0.3s ease, transform 1s ease, opacity 1s ease;
+    -ms-transition: background-color 0.3s ease, transform 1s ease, opacity 1s ease;
+    -o-transition: background-color 0.3s ease, transform 1s ease, opacity 1s ease;
+    transition: background-color 0.3s ease, transform 1s ease, opacity 1s ease;
+    opacity: 0;
+}
+.observedVisible {
+    -webkit-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -o-transform: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+}
 
 
 
@@ -174,7 +221,11 @@ a:hover, svg:hover {
     .topleft, .topright, .centerleft, .centerright, .bottomleft, .bottomright {
         height: calc(calc(100vw / 16) * 1);
     }
-    .topleft, .topright {
+    .topleft {
+        -webkit-transform: translateY(calc(calc(100vw / 16) * -.225));
+        -moz-transform: translateY(calc(calc(100vw / 16) * -.225));
+        -ms-transform: translateY(calc(calc(100vw / 16) * -.225));
+        -o-transform: translateY(calc(calc(100vw / 16) * -.225));
         transform: translateY(calc(calc(100vw / 16) * -.225));
     }
     .topleft {
@@ -198,12 +249,19 @@ a:hover, svg:hover {
     .bottomright {
         bottom: calc(calc(100vw / 16) * 1);
         right: calc(calc(100vw / 16) * 1);
-        transform: translateY(calc(calc(100vw / 16) * .065))
+        -webkit-transform: translateY(calc(calc(100vw / 16) * .065));
+        -moz-transform: translateY(calc(calc(100vw / 16) * .065));
+        -ms-transform: translateY(calc(calc(100vw / 16) * .065));
+        -o-transform: translateY(calc(calc(100vw / 16) * .065));
+        transform: translateY(calc(calc(100vw / 16) * .065));
     }
     .gridContainer {
         grid-template-columns: repeat(16, calc(100vw / 16));
         grid-template-rows: repeat(259, calc(100vw / 16));
         height: calc(calc(100vw / 16) * 259);
+    }
+    [class^="gridItem"] {
+        pointer-events: none;
     }
 
 
@@ -212,13 +270,21 @@ a:hover, svg:hover {
         font-size: calc(calc(100vw / 16) * 1.8);
         line-height: calc(calc(100vw / 16) * 2);
         /* optional line height correction */
+        -webkit-transform: translateY(calc(calc(100vw / 16) * .35));
+        -moz-transform: translateY(calc(calc(100vw / 16) * .35));
+        -ms-transform: translateY(calc(calc(100vw / 16) * .35));
+        -o-transform: translateY(calc(calc(100vw / 16) * .35));
         transform: translateY(calc(calc(100vw / 16) * .35));
     }
     .parallaxContent {
         font-size: calc(calc(100vw / 16) * .9);
         line-height: calc(calc(100vw / 16) * 1);
-        height: calc(calc(100vw / 16) * 2);
+        height: fit-content !important;
         /* optional line height correction */
+        -webkit-transform: translateY(calc(calc(100vw / 16) * .175));
+        -moz-transform: translateY(calc(calc(100vw / 16) * .175));
+        -ms-transform: translateY(calc(calc(100vw / 16) * .175));
+        -o-transform: translateY(calc(calc(100vw / 16) * .175));
         transform: translateY(calc(calc(100vw / 16) * .175));
         text-indent: calc(calc(100vw / 16) * 2);
     }
@@ -226,11 +292,16 @@ a:hover, svg:hover {
         width: calc(calc(100vw / 16) * 14);
     }
     #parallaxTitleA {
-        top: calc(calc(100vw / 16) * 43);
+        top: calc(calc(100vw / 16) * 47);
         left: calc(calc(100vw / 16) * 1);
     }
-    #parallaxContentA {
-        top: calc(calc(100vw / 16) * 46);
+    #parallaxContentA1{
+        top: calc(calc(100vw / 16) * 50);
+        left: calc(calc(100vw / 16) * 1);
+        height: calc(calc(100vw / 16) * 4);
+    }
+    #parallaxContentA2 {
+        top: calc(calc(100vw / 16) * 64);
         left: calc(calc(100vw / 16) * 1);
         height: calc(calc(100vw / 16) * 4);
     }
@@ -239,9 +310,43 @@ a:hover, svg:hover {
         left: calc(calc(100vw / 16) * 1);
     }
     #parallaxContentB {
-        top: calc(calc(100vw / 16) * 231);
+        top: calc(calc(100vw / 16) * 229);
         left: calc(calc(100vw / 16) * 1);
         height: calc(calc(100vw / 16) * 9);
+        text-indent: 0;
+    }
+    .lightbox img {
+        max-width: calc(calc(100vw / 16) * 10);
+        max-height: calc(100vh - calc(100vw / 16) * 6);
+    }
+
+
+
+
+
+
+    .observed {
+        -webkit-transform: translateY(calc(calc(100vw / 16) * 2));
+        -moz-transform: translateY(calc(calc(100vw / 16) * 2));
+        -ms-transform: translateY(calc(calc(100vw / 16) * 2));
+        -o-transform: translateY(calc(calc(100vw / 16) * 2));
+        transform: translateY(calc(calc(100vw / 16) * 2));
+    }
+}
+
+
+
+/*                  behavior above 512 pixels     TABLET AND DESKTOP      */
+
+
+
+@media screen and (min-width: 32rem) {
+    [class^="gridItem"] {
+        background-color: transparent;
+        background-blend-mode: multiply;
+    }
+    [class^="gridItem"]:hover {
+        background-color: grey;
     }
 }
 
@@ -274,7 +379,11 @@ a:hover, svg:hover {
     .topleft, .topright, .centerleft, .centerright, .bottomleft, .bottomright {
         height: calc(calc(100vw / 46) * 2);
     }
-    .topleft, .topright {
+    .topleft {
+        -webkit-transform: translateY(calc(calc(100vw / 46) * -.275));
+        -moz-transform: translateY(calc(calc(100vw / 46) * -.275));
+        -ms-transform: translateY(calc(calc(100vw / 46) * -.275));
+        -o-transform: translateY(calc(calc(100vw / 46) * -.275));
         transform: translateY(calc(calc(100vw / 46) * -.275));
     }
     .topleft {
@@ -298,7 +407,11 @@ a:hover, svg:hover {
     .bottomright {
         bottom: calc(calc(100vw / 46) * 2);
         right: calc(calc(100vw / 46) * 2);
-        transform: translateY(calc(calc(100vw / 46) * .13))
+        -webkit-transform: translateY(calc(calc(100vw / 46) * .13));
+        -moz-transform: translateY(calc(calc(100vw / 46) * .13));
+        -ms-transform: translateY(calc(calc(100vw / 46) * .13));
+        -o-transform: translateY(calc(calc(100vw / 46) * .13));
+        transform: translateY(calc(calc(100vw / 46) * .13));
     }
     .gridContainer {
         grid-template-columns: repeat(46, calc(100vw / 46));
@@ -312,6 +425,10 @@ a:hover, svg:hover {
         font-size: calc(calc(100vw / 46) * 1.8);
         line-height: calc(calc(100vw / 46) * 2);
         /* optional line height correction */
+        -webkit-transform: translateY(calc(calc(100vw / 46) * .35));
+        -moz-transform: translateY(calc(calc(100vw / 46) * .35));
+        -ms-transform: translateY(calc(calc(100vw / 46) * .35));
+        -o-transform: translateY(calc(calc(100vw / 46) * .35));
         transform: translateY(calc(calc(100vw / 46) * .35));
     }
     .parallaxContent {
@@ -319,6 +436,10 @@ a:hover, svg:hover {
         line-height: calc(calc(100vw / 46) * 1);
         height: calc(calc(100vw / 46) * 2);
         /* optional line height correction */
+        -webkit-transform: translateY(calc(calc(100vw / 46) * .175));
+        -moz-transform: translateY(calc(calc(100vw / 46) * .175));
+        -ms-transform: translateY(calc(calc(100vw / 46) * .175));
+        -o-transform: translateY(calc(calc(100vw / 46) * .175));
         transform: translateY(calc(calc(100vw / 46) * .175));
         text-indent: calc(calc(100vw / 46) * 2);
     }
@@ -341,6 +462,21 @@ a:hover, svg:hover {
         top: calc(calc(100vw / 46) * 159);
         left: calc(calc(100vw / 46) * 3);
         height: calc(calc(100vw / 46) * 9);
+    }
+    .lightbox img {
+        max-width: calc(calc(100vw / 46) * 40);
+        max-height: calc(100vh - calc(100vw / 46) * 6);
+    }
+
+
+
+
+    .observed {
+        -webkit-transform: translateY(calc(calc(100vw / 46) * 2));
+        -moz-transform: translateY(calc(calc(100vw / 46) * 2));
+        -ms-transform: translateY(calc(calc(100vw / 46) * 2));
+        -o-transform: translateY(calc(calc(100vw / 46) * 2));
+        transform: translateY(calc(calc(100vw / 46) * 2));
     }
 }
 
@@ -374,7 +510,11 @@ a:hover, svg:hover {
     .topleft, .topright, .centerleft, .centerright, .bottomleft, .bottomright {
         height: calc(calc(100vw / 44) * 1);
     }
-    .topleft, .topright {
+    .topleft {
+        -webkit-transform: translateY(calc(calc(100vw / 44) * -.275));
+        -moz-transform: translateY(calc(calc(100vw / 44) * -.275));
+        -ms-transform: translateY(calc(calc(100vw / 44) * -.275));
+        -o-transform: translateY(calc(calc(100vw / 44) * -.275));
         transform: translateY(calc(calc(100vw / 44) * -.275));
     }
     .topleft {
@@ -398,7 +538,11 @@ a:hover, svg:hover {
     .bottomright {
         bottom: calc(calc(100vw / 44) * 1);
         right: calc(calc(100vw / 44) * 1);
-        transform: translateY(calc(calc(100vw / 44) * .13))
+        -webkit-transform: translateY(calc(calc(100vw / 44) * .13));
+        -moz-transform: translateY(calc(calc(100vw / 44) * .13));
+        -ms-transform: translateY(calc(calc(100vw / 44) * .13));
+        -o-transform: translateY(calc(calc(100vw / 44) * .13));
+        transform: translateY(calc(calc(100vw / 44) * .13));
     }
     .gridContainer {
         grid-template-columns: repeat(44, calc(100vw / 44));
@@ -412,6 +556,10 @@ a:hover, svg:hover {
         font-size: calc(calc(100vw / 44) * 1.8);
         line-height: calc(calc(100vw / 44) * 2);
         /* optional line height correction */
+        -webkit-transform: translateY(calc(calc(100vw / 44) * .35));
+        -moz-transform: translateY(calc(calc(100vw / 44) * .35));
+        -ms-transform: translateY(calc(calc(100vw / 44) * .35));
+        -o-transform: translateY(calc(calc(100vw / 44) * .35));
         transform: translateY(calc(calc(100vw / 44) * .35));
     }
     .parallaxContent {
@@ -419,6 +567,10 @@ a:hover, svg:hover {
         line-height: calc(calc(100vw / 44) * 1);
         height: calc(calc(100vw / 44) * 2);
         /* optional line height correction */
+        -webkit-transform: translateY(calc(calc(100vw / 44) * .175));
+        -moz-transform: translateY(calc(calc(100vw / 44) * .175));
+        -ms-transform: translateY(calc(calc(100vw / 44) * .175));
+        -o-transform: translateY(calc(calc(100vw / 44) * .175));
         transform: translateY(calc(calc(100vw / 44) * .175));
         text-indent: calc(calc(100vw / 44) * 2);
     }
@@ -442,9 +594,41 @@ a:hover, svg:hover {
         left: calc(calc(100vw / 44) * 3);
         height: calc(calc(100vw / 44) * 9);
     }
+    .lightbox img {
+        max-width: calc(calc(100vw / 44) * 38);
+        max-height: calc(100vh - calc(100vw / 44) * 6);
+    }
+
+
+
+
+
+    .observed {
+        -webkit-transform: translateY(calc(calc(100vw / 44) * 2));
+        -moz-transform: translateY(calc(calc(100vw / 44) * 2));
+        -ms-transform: translateY(calc(calc(100vw / 44) * 2));
+        -o-transform: translateY(calc(calc(100vw / 44) * 2));
+        transform: translateY(calc(calc(100vw / 44) * 2));
+    }
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE */
+/*  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE */
+/*  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE */
 
 /* responsive on info page */
 @media screen and (max-width: 67.1rem) {
@@ -476,18 +660,15 @@ a:hover, svg:hover {
     height: 100vh;
     overflow-y: auto;
     overflow-x: hidden;
-    perspective: 18.75rem;
     -webkit-perspective: 18.75rem;
+    perspective: 18.75rem;
+    -webkit-perspective-origin: 50%;
     perspective-origin: 50%;
-    -webkit-perspective-origin: 50%;    
 }
 .parallaxGroup {
-    /*
-    margin: calc(6rem - .6rem) 2rem calc(6rem - 1rem) 2rem;
-    */
     position: relative;
-    transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
 }
 .parallaxLayer {
     position: absolute;
@@ -495,34 +676,35 @@ a:hover, svg:hover {
     right: 0;
     bottom: 0;
     left: 0;
-    perspective-origin: 100%;
     -webkit-perspective-origin: 100%;
+    perspective-origin: 100%;
 }
 .parallaxLayerBase {
-    transform: translateZ(0);
     -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
 }
 .parallaxLayerForeground {
     line-height: 4rem;
     height: 2rem;
     background-color: rgba(0, 255, 0, .2);
-    transform: translateZ(90px) scale(.7);
     -webkit-transform: translateZ(90px) scale(.7);
+    -moz-transform: translateZ(90px) scale(.7);
+    -ms-transform: translateZ(90px) scale(.7);
+    -o-transform: translateZ(90px) scale(.7);
+    transform: translateZ(90px) scale(.7);
 }
 .parallaxFont {
-    /*
-    width: calc(100vw - 4rem);
-    */
     position: absolute;
-    /*
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    */
 }
 
 
+
+/*  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE */
+/*  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE */
+/*  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE */
 
 .debugCenter {
     height: 2px;
@@ -548,35 +730,6 @@ a:hover, svg:hover {
 a {
     width: fit-content;
 }
-.lightbox {
-    background-color: white;
-    position: fixed;
-    z-index: 3;
-    display: none;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-}
-.lightbox img {
-    background-color: transparent;
-    position: absolute;
-    z-index: 4;
-    max-width: calc(100% - 12rem); /* - 200px */
-    max-height: calc(100% - 12rem); /* - 200px */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.lightboxCaption {
-    position: absolute;
-    width: 100vw;
-    bottom: 2rem; /* 40px */
-    text-align: center;
-}
-.lightboxSrc {
-    cursor: pointer;
-}
 @media screen and (max-width: 32rem) {
     .gridItem000 {
         grid-column: 4 / 14;
@@ -594,12 +747,12 @@ a {
         grid-row: 32 / 42;
         background: url("../assets/asset_001.jpg");
     }
-    */
     .gridItem003 {
         grid-column: 4 / 14;
         grid-row: 47 / 54;
         background: url("../assets/asset_006.jpg");
     }
+    */
     .gridItem004 {
         grid-column: 2 / 16;
         grid-row: 56 / 66;
@@ -692,22 +845,8 @@ a {
         grid-row: 247 / 257;
         background: url("../assets/asset_027.jpg");
     }
-    [class^="gridItem"] {
-        pointer-events: none;
-    }
-    .observed {
-        transform: translateY(2rem); /* 35px */
-    }
 }
-@media screen and (min-width: 32rem) {
-    [class^="gridItem"] {
-        background-color: transparent;
-        background-blend-mode: multiply;
-    }
-    [class^="gridItem"]:hover {
-        background-color: grey;
-    }
-}
+
 /* take values from desktop,
 add 1 to x
 add 3 to y
@@ -841,43 +980,6 @@ each for correct view on tablet */
         background: url("../assets/asset_027.jpg");
     }
 }
-[class^="gridItem"] {
-    background-repeat: no-repeat;
-    background-size: cover;
-    cursor: pointer;
-}
-.observed {
-    -webkit-transition: background-color 0.3s ease, transform 1s ease, opacity 1s ease;
-    -moz-transition: background-color 0.3s ease, transform 1s ease, opacity 1s ease;
-    -ms-transition: background-color 0.3s ease, transform 1s ease, opacity 1s ease;
-    -o-transition: background-color 0.3s ease, transform 1s ease, opacity 1s ease;
-    transition: background-color 0.3s ease, transform 1s ease, opacity 1s ease;
-    transform: translateY(2rem); /* 35px */
-    opacity: 0;
-}
-.observedVisible {
-    transform: none;
-    opacity: 1;
-}
-/*  WORK IN PROGRESS    WORK IN PROGRESS    WORK IN PROGRESS    WORK IN PROGRESS    WORK IN PROGRESS    */
-/*  WORK IN PROGRESS    WORK IN PROGRESS    WORK IN PROGRESS    WORK IN PROGRESS    WORK IN PROGRESS    */
-/*  WORK IN PROGRESS    WORK IN PROGRESS    WORK IN PROGRESS    WORK IN PROGRESS    WORK IN PROGRESS    */
-
-.caption {
-    pointer-events: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 1rem;
-    color: white;
-    z-index: 1;
-    transition: transform 1s ease, opacity 0.3s ease;
-}
-
-/*  WORK IN PROGRESS    WORK IN PROGRESS    WORK IN PROGRESS    WORK IN PROGRESS    WORK IN PROGRESS    */
-/*  WORK IN PROGRESS    WORK IN PROGRESS    WORK IN PROGRESS    WORK IN PROGRESS    WORK IN PROGRESS    */
-/*  WORK IN PROGRESS    WORK IN PROGRESS    WORK IN PROGRESS    WORK IN PROGRESS    WORK IN PROGRESS    */
 .anim {
     animation: anim;
     animation-duration: 1s;
@@ -895,11 +997,19 @@ each for correct view on tablet */
 }
 @keyframes anim {
     from {
-        transform: translateY(2rem); /* 35px */
+        -webkit-transform: translateY(2rem);
+        -moz-transform: translateY(2rem);
+        -ms-transform: translateY(2rem);
+        -o-transform: translateY(2rem);
+        transform: translateY(2rem);
         opacity: 0;
     }
     to {
-        transform: translateY(0rem); /* 0px */
+        -webkit-transform: translateY(0rem);
+        -moz-transform: translateY(0rem);
+        -ms-transform: translateY(0rem);
+        -o-transform: translateY(0rem);
+        transform: translateY(0rem);
         opacity: 1;
     }
 }
