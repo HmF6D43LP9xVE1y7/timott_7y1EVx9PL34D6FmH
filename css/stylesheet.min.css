@@ -713,6 +713,7 @@ a:hover, svg:hover {
 
 * {
     background-color: rgba(255, 0, 0, .2);
+    outline: 1px dashed black !important;
 }
 
 
