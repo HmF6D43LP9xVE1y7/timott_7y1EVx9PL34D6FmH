@@ -112,7 +112,8 @@ body {
 
 
 .underline {
-    text-decoration: underline;
+    font-style: italic;
+    text-decoration: underline calc(calc(100vw / 44) * .05);
     text-decoration-style: solid;
     text-decoration-color: black;
     -moz-text-decoration-style: solid;
@@ -133,6 +134,9 @@ a, svg {
 a:hover, svg:hover {
     opacity: .3;
     cursor: pointer;
+}
+.topright {
+    text-align: right;
 }
 .topleft, .topright, .centerleft, .centerright, .bottomleft, .bottomright {
     position: fixed;
@@ -237,7 +241,7 @@ a:hover, svg:hover {
 .lightboxSrc {
     cursor: pointer;
 }
-.contentLarge, .contentSmall {
+.contentLarge, .contentMedium, .contentSmall {
     position: absolute;
 }
 .noIndent {
@@ -305,6 +309,9 @@ a:hover, svg:hover {
         grid-template-rows: repeat(259, calc(100vw / 16));
         height: calc(calc(100vw / 16) * 259);
     }
+    #gridContainer {
+        height: calc(calc(100vw / 16) * 45.5);
+    }
     [class^="gridItem"] {
         pointer-events: none;
     }
@@ -319,7 +326,7 @@ a:hover, svg:hover {
 
 
 
-    .parallaxTitle, .contentLarge {
+    .parallaxLarge, .contentLarge {
         font-size: calc(calc(100vw / 16) * 1.8);
         line-height: calc(calc(100vw / 16) * 2);
         /* optional line height correction */
@@ -329,7 +336,7 @@ a:hover, svg:hover {
         -o-transform: translateY(calc(calc(100vw / 16) * .35));
         transform: translateY(calc(calc(100vw / 16) * .35));
     }
-    .parallaxContent, .contentSmall {
+    .parallaxMedium, .contentMedium, .contentSmall {
         font-size: calc(calc(100vw / 16) * .9);
         line-height: calc(calc(100vw / 16) * 1);
         /* optional line height correction */
@@ -340,32 +347,45 @@ a:hover, svg:hover {
         transform: translateY(calc(calc(100vw / 16) * .175));
         text-indent: calc(calc(100vw / 16) * 2);
     }
-    .parallaxTitle, .parallaxContent {
+    .parallaxLarge, .parallaxMedium {
         width: calc(calc(100vw / 16) * 14);
     }
-    .parallaxTitleA0 {
+    .parallaxA0 {
         top: calc(calc(100vw / 16) * 47);
         left: calc(calc(100vw / 16) * 1);
     }
-    .parallaxContentA0 {
+    .parallaxA1 {
         top: calc(calc(100vw / 16) * 50);
         left: calc(calc(100vw / 16) * 1);
     }
-    .parallaxContentA1 {
+    .parallaxA2 {
         top: calc(calc(100vw / 16) * 64);
         left: calc(calc(100vw / 16) * 1);
     }
-    .parallaxTitleB0 {
+    .parallaxB0 {
         top: calc(calc(100vw / 16) * 226);
         left: calc(calc(100vw / 16) * 1);
     }
-    .parallaxContentB0 {
+    .parallaxB1 {
         top: calc(calc(100vw / 16) * 229);
         left: calc(calc(100vw / 16) * 1);
     }
     .lightbox img {
         max-width: calc(calc(100vw / 16) * 14);
         max-height: calc(100vh - calc(100vw / 16) * 6);
+    }
+    .contentA0 {
+        width: calc(calc(100vw / 16) * 14);
+        top: calc(calc(100vw / 16) * 2.5);
+        left: calc(calc(100vw / 16) * 1);
+    }
+    .contentA1 {
+        width: calc(calc(100vw / 16) * 14);
+        top: calc(calc(100vw / 16) * 23.5);
+        left: calc(calc(100vw / 16) * 1);
+    }
+    .contentB0, .contentB1 {
+        display: none;
     }
 }
 
@@ -453,6 +473,9 @@ a:hover, svg:hover {
         grid-template-rows: repeat(146, calc(100vw / 46));
         height: calc(calc(100vw / 46) * 146);
     }
+    #gridContainer {
+        height: 0;
+    }
     .observed {
         -webkit-transform: translateY(calc(calc(100vw / 46) * 1));
         -moz-transform: translateY(calc(calc(100vw / 46) * 1));
@@ -462,7 +485,7 @@ a:hover, svg:hover {
     }
 
 
-    .parallaxTitle, .contentLarge {
+    .parallaxLarge, .contentLarge {
         font-size: calc(calc(100vw / 46) * 1.8);
         line-height: calc(calc(100vw / 46) * 2);
         /* optional line height correction */
@@ -472,7 +495,7 @@ a:hover, svg:hover {
         -o-transform: translateY(calc(calc(100vw / 46) * .35));
         transform: translateY(calc(calc(100vw / 46) * .35));
     }
-    .parallaxContent, .contentSmall {
+    .parallaxMedium, .contentMedium, .contentSmall {
         font-size: calc(calc(100vw / 46) * .9);
         line-height: calc(calc(100vw / 46) * 1);
         /* optional line height correction */
@@ -483,25 +506,25 @@ a:hover, svg:hover {
         transform: translateY(calc(calc(100vw / 46) * .175));
         text-indent: calc(calc(100vw / 46) * 2);
     }
-    .parallaxTitleA0 {
+    .parallaxA0 {
         top: calc(calc(100vw / 46) * 40);
         left: calc(calc(100vw / 46) * 31);
     }
-    .parallaxContentA0 {
+    .parallaxA1 {
         width: calc(calc(100vw / 46) * 26);
         top: calc(calc(100vw / 46) * 43);
         left: calc(calc(100vw / 46) * 17);
     }
-    .parallaxContentA1 {
+    .parallaxA2 {
         width: calc(calc(100vw / 46) * 26);
         top: calc(calc(100vw / 46) * 50);
         left: calc(calc(100vw / 46) * 17);
     }
-    .parallaxTitleB0 {
+    .parallaxB0 {
         top: calc(calc(100vw / 46) * 156);
         left: calc(calc(100vw / 46) * 1);
     }
-    .parallaxContentB0 {
+    .parallaxB1 {
         width: calc(calc(100vw / 46) * 24);
         top: calc(calc(100vw / 46) * 159);
         left: calc(calc(100vw / 46) * 3);
@@ -509,6 +532,19 @@ a:hover, svg:hover {
     .lightbox img {
         max-width: calc(calc(100vw / 46) * 34);
         max-height: calc(100vh - calc(100vw / 46) * 12);
+    }
+    .contentA0 {
+        width: calc(calc(100vw / 44) * 26.5);
+        top: calc(calc(100vw / 44) * 5);
+        left: calc(calc(100vw / 44) * 2);
+    }
+    .contentA1 {
+        width: calc(calc(100vw / 44) * 26.5);
+        top: calc(calc(100vw / 44) * 15.25);
+        left: calc(calc(100vw / 44) * 2);
+    }
+    .contentB0, .contentB1 {
+        display: none;
     }
 }
 
@@ -579,7 +615,9 @@ a:hover, svg:hover {
     .gridContainer {
         grid-template-columns: repeat(44, calc(100vw / 44));
         grid-template-rows: repeat(146, calc(100vw / 44));
-        height: calc(calc(100vw / 44) * 146);
+    }
+    #gridContainer {
+        height: 0;
     }
     .observed {
         -webkit-transform: translateY(calc(calc(100vw / 44) * 1));
@@ -590,7 +628,7 @@ a:hover, svg:hover {
     }
 
 
-    .parallaxTitle, .contentLarge {
+    .parallaxLarge, .contentLarge {
         font-size: calc(calc(100vw / 44) * 1.8);
         line-height: calc(calc(100vw / 44) * 2);
         /* optional line height correction */
@@ -600,7 +638,7 @@ a:hover, svg:hover {
         -o-transform: translateY(calc(calc(100vw / 44) * .35));
         transform: translateY(calc(calc(100vw / 44) * .35));
     }
-    .parallaxContent, .contentSmall {
+    .parallaxMedium, .contentMedium {
         font-size: calc(calc(100vw / 44) * .9);
         line-height: calc(calc(100vw / 44) * 1);
         /* optional line height correction */
@@ -611,25 +649,36 @@ a:hover, svg:hover {
         transform: translateY(calc(calc(100vw / 44) * .175));
         text-indent: calc(calc(100vw / 44) * 2);
     }
-    .parallaxTitleA0 {
+    .contentSmall {
+        font-size: calc(calc(100vw / 44) * .45);
+        line-height: calc(calc(100vw / 44) * .5);
+        /* optional line height correction */
+        -webkit-transform: translateY(calc(calc(100vw / 44) * .0875));
+        -moz-transform: translateY(calc(calc(100vw / 44) * .0875));
+        -ms-transform: translateY(calc(calc(100vw / 44) * .0875));
+        -o-transform: translateY(calc(calc(100vw / 44) * .0875));
+        transform: translateY(calc(calc(100vw / 44) * .0875));
+        text-indent: calc(calc(100vw / 44) * 2);
+    }
+    .parallaxA0 {
         top: calc(calc(100vw / 44) * 40);
         left: calc(calc(100vw / 44) * 31);
     }
-    .parallaxContentA0 {
+    .parallaxA1 {
         width: calc(calc(100vw / 44) * 26);
         top: calc(calc(100vw / 44) * 43);
         left: calc(calc(100vw / 44) * 17);
     }
-    .parallaxContentA1 {
+    .parallaxA2 {
         width: calc(calc(100vw / 44) * 26);
         top: calc(calc(100vw / 44) * 50);
         left: calc(calc(100vw / 44) * 17);
     }
-    .parallaxTitleB0 {
+    .parallaxB0 {
         top: calc(calc(100vw / 44) * 156);
         left: calc(calc(100vw / 44) * 1);
     }
-    .parallaxContentB0 {
+    .parallaxB1 {
         width: calc(calc(100vw / 44) * 24);
         top: calc(calc(100vw / 44) * 159);
         left: calc(calc(100vw / 44) * 3);
@@ -639,13 +688,21 @@ a:hover, svg:hover {
         max-height: calc(100vh - calc(100vw / 44) * 6);
     }
     .contentA0 {
-        width: calc(calc(100vw / 44) * 28);
-        top: calc(calc(100vw / 44) * 3);
+        width: calc(calc(100vw / 44) * 13.8);
+        top: calc(calc(100vw / 44) * 2.5);
         left: calc(calc(100vw / 44) * 1);
     }
     .contentA1 {
-        width: calc(calc(100vw / 44) * 28);
-        top: calc(calc(100vw / 44) * 13);
+        width: calc(calc(100vw / 44) * 13.8);
+        top: calc(calc(100vw / 44) * 8);
+        left: calc(calc(100vw / 44) * 1);
+    }
+    .contentB0 {
+        top: calc(calc(100vw / 44) * 13.25);
+        left: calc(calc(100vw / 44) * 1);
+    }
+    .contentB1 {
+        top: calc(calc(100vw / 44) * 15);
         left: calc(calc(100vw / 44) * 1);
     }
 
@@ -653,26 +710,26 @@ a:hover, svg:hover {
 
 
 
-    .contentD0 {
+    .contentC0 {
         width: calc(calc(100vw / 44) * 22);
         top: calc(calc(100vw / 44) * 3);
         left: calc(calc(100vw / 44) * 1);
         text-indent: 0;
     }
-    .contentE0 {
+    .contentD0 {
         top: calc(calc(100vw / 44) * 8);
         left: calc(calc(100vw / 44) * 1);
     }
-    .contentE1 {
+    .contentD1 {
         width: calc(calc(100vw / 44) * 22);
         top: calc(calc(100vw / 44) * 11);
         left: calc(calc(100vw / 44) * 1);
     }
-    .contentF0 {
+    .contentE0 {
         top: calc(calc(100vw / 44) * 15);
         left: calc(calc(100vw / 44) * 1);
     }
-    .contentF1 {
+    .contentE1 {
         width: calc(calc(100vw / 44) * 22);
         top: calc(calc(100vw / 44) * 18);
         left: calc(calc(100vw / 44) * 1);
@@ -690,7 +747,11 @@ a:hover, svg:hover {
 
 
 
+/*
 
+replace grid values with variable "  --X  "
+
+*/
 
 
 /*  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE */
@@ -1055,6 +1116,8 @@ each for correct view on tablet */
 /*  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE */
 /*  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE */
 /*  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE */
+
+
 
 .debugCenter {
     height: 2px;
