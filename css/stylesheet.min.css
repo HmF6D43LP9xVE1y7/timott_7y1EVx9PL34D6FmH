@@ -85,7 +85,13 @@ body {
 }
 .underline {
     font-style: italic;
-    text-decoration: underline calc(calc(100vw / 44) * .05);
+
+
+
+    /*  fix underline for safari    */
+
+
+
     text-decoration-style: solid;
     text-decoration-color: black;
     -moz-text-decoration-style: solid;
@@ -213,6 +219,9 @@ a:hover, svg:hover {
 .lightboxSrc {
     cursor: pointer;
 }
+.contentB0 {
+    text-align: right;
+}
 .contentLarge, .contentMedium, .contentSmall {
     position: absolute;
 }
@@ -231,6 +240,9 @@ a:hover, svg:hover {
 
 
 @media screen and (max-width: 32rem) {
+    .underline {
+        text-decoration: underline calc(calc(100vw / 44) * .2);
+    }
     .fontLarge {
         font-size: calc(calc(100vw / var(--gridMobile)) * .9);
     }
@@ -253,7 +265,7 @@ a:hover, svg:hover {
     .topleft, .topright, .centerleft, .centerright, .bottomleft, .bottomright {
         height: calc(calc(100vw / var(--gridMobile)) * 1);
     }
-    .topleft {
+    .topleft, .topright {
         -webkit-transform: translateY(calc(calc(100vw / var(--gridMobile)) * -.225));
         -moz-transform: translateY(calc(calc(100vw / var(--gridMobile)) * -.225));
         -ms-transform: translateY(calc(calc(100vw / var(--gridMobile)) * -.225));
@@ -285,8 +297,11 @@ a:hover, svg:hover {
         grid-template-rows: repeat(259, calc(100vw / var(--gridMobile)));
         height: calc(calc(100vw / var(--gridMobile)) * 259);
     }
-    #gridContainer {
-        height: calc(calc(100vw / var(--gridMobile)) * 45.5);
+    #gridContainerA {
+        height: calc(calc(100vw / var(--gridMobile)) * 45);
+    }
+    #gridContainerB {
+        height: calc(calc(100vw / var(--gridMobile)) * 50);
     }
     [class^="gridItem"] {
         pointer-events: none;
@@ -360,7 +375,7 @@ a:hover, svg:hover {
         top: calc(calc(100vw / var(--gridMobile)) * 23.5);
         left: calc(calc(100vw / var(--gridMobile)) * 1);
     }
-    .contentB0, .contentB1 {
+    .contentB0 {
         display: none;
     }
 }
@@ -387,7 +402,10 @@ a:hover, svg:hover {
 
 
 
-@media screen and (min-width: 32rem) and (max-width : 86rem) {
+@media screen and (min-width: 32rem) and (max-width : 65rem) {
+    .underline {
+        text-decoration: underline calc(calc(100vw / 44) * .075);
+    }
     .fontLarge {
         font-size: calc(calc(100vw / var(--gridTablet)) * 1.8);
     }
@@ -410,7 +428,7 @@ a:hover, svg:hover {
     .topleft, .topright, .centerleft, .centerright, .bottomleft, .bottomright {
         height: calc(calc(100vw / var(--gridTablet)) * 2);
     }
-    .topleft {
+    .topleft, .topright {
         -webkit-transform: translateY(calc(calc(100vw / var(--gridTablet)) * -.275));
         -moz-transform: translateY(calc(calc(100vw / var(--gridTablet)) * -.275));
         -ms-transform: translateY(calc(calc(100vw / var(--gridTablet)) * -.275));
@@ -449,8 +467,11 @@ a:hover, svg:hover {
         grid-template-rows: repeat(var(--gridTablet), calc(100vw / var(--gridTablet)));
         height: calc(calc(100vw / var(--gridTablet)) * 146);
     }
-    #gridContainer {
-        height: 0;
+    #gridContainerA {
+        height: calc(calc(100vw / var(--gridTablet)) * 30);
+    }
+    #gridContainerB {
+        height: calc(calc(100vw / var(--gridTablet)) * 500);
     }
     .observed {
         -webkit-transform: translateY(calc(calc(100vw / var(--gridTablet)) * 1));
@@ -510,19 +531,21 @@ a:hover, svg:hover {
         max-height: calc(100vh - calc(100vw / var(--gridTablet)) * 12);
     }
     .contentA0 {
-        width: calc(calc(100vw / 44) * 26.5);
-        top: calc(calc(100vw / 44) * 5);
-        left: calc(calc(100vw / 44) * 2);
+        width: calc(calc(100vw / var(--gridTablet)) * 26.5);
+        top: calc(calc(100vw / var(--gridTablet)) * 5);
+        left: calc(calc(100vw / var(--gridTablet)) * 2);
     }
     .contentA1 {
-        width: calc(calc(100vw / 44) * 26.5);
-        top: calc(calc(100vw / 44) * 15.25);
-        left: calc(calc(100vw / 44) * 2);
+        width: calc(calc(100vw / var(--gridTablet)) * 26.5);
+        top: calc(calc(100vw / var(--gridTablet)) * 15.75);
+        left: calc(calc(100vw / var(--gridTablet)) * 2);
     }
-    .contentB0, .contentB1 {
-        display: none;
+    .contentB0 {
+        top: calc(calc(100vw / var(--gridTablet)) * 5);
+        right: calc(calc(100vw / var(--gridTablet)) * 2);
     }
 }
+/* fix optional spacing of B0 towards top, aswell as contact */
 
 
 
@@ -531,7 +554,10 @@ a:hover, svg:hover {
 
 
 
-@media screen and (min-width: 86rem) {
+@media screen and (min-width: 65rem) {
+    .underline {
+        text-decoration: underline calc(calc(100vw / 44) * .04);
+    }
     .fontLarge {
         font-size: calc(calc(100vw / var(--gridDesktop)) * .9);
     }
@@ -554,7 +580,7 @@ a:hover, svg:hover {
     .topleft, .topright, .centerleft, .centerright, .bottomleft, .bottomright {
         height: calc(calc(100vw / var(--gridDesktop)) * 1);
     }
-    .topleft {
+    .topleft, .topright {
         -webkit-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * -.275));
         -moz-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * -.275));
         -ms-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * -.275));
@@ -592,8 +618,11 @@ a:hover, svg:hover {
         grid-template-columns: repeat(var(--gridDesktop), calc(100vw / var(--gridDesktop)));
         grid-template-rows: repeat(146, calc(100vw / var(--gridDesktop)));
     }
-    #gridContainer {
-        height: 0;
+    #gridContainerA {
+        height: calc(calc(100vw / var(--gridDesktop)) * 15);
+    }
+    #gridContainerB {
+        height: calc(calc(100vw / var(--gridDesktop)) * 65.75);
     }
     .observed {
         -webkit-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * 1));
@@ -674,40 +703,106 @@ a:hover, svg:hover {
         left: calc(calc(100vw / var(--gridDesktop)) * 1);
     }
     .contentB0 {
-        top: calc(calc(100vw / var(--gridDesktop)) * 13.25);
-        left: calc(calc(100vw / var(--gridDesktop)) * 1);
+        top: calc(calc(100vw / var(--gridDesktop)) * 2.5);
+        right: calc(calc(100vw / var(--gridDesktop)) * 1);
     }
-    .contentB1 {
-        top: calc(calc(100vw / var(--gridDesktop)) * 15);
-        left: calc(calc(100vw / var(--gridDesktop)) * 1);
-    }
+
+
+
+
+
+
+
+
+
 
 
 
 
 
     .contentC0 {
-        width: calc(calc(100vw / var(--gridDesktop)) * 22);
-        top: calc(calc(100vw / var(--gridDesktop)) * 3);
+        width: calc(calc(100vw / var(--gridDesktop)) * 13.8);
+        top: calc(calc(100vw / var(--gridDesktop)) * 2.5);
         left: calc(calc(100vw / var(--gridDesktop)) * 1);
-        text-indent: 0;
     }
     .contentD0 {
-        top: calc(calc(100vw / var(--gridDesktop)) * 8);
+        width: calc(calc(100vw / var(--gridDesktop)) * 13.8);
+        top: calc(calc(100vw / var(--gridDesktop)) * 5);
         left: calc(calc(100vw / var(--gridDesktop)) * 1);
     }
     .contentD1 {
-        width: calc(calc(100vw / var(--gridDesktop)) * 22);
-        top: calc(calc(100vw / var(--gridDesktop)) * 11);
+        width: calc(calc(100vw / var(--gridDesktop)) * 13.8);
+        top: calc(calc(100vw / var(--gridDesktop)) * 6.75);
         left: calc(calc(100vw / var(--gridDesktop)) * 1);
     }
     .contentE0 {
-        top: calc(calc(100vw / var(--gridDesktop)) * 15);
+        width: calc(calc(100vw / var(--gridDesktop)) * 13.8);
+        top: calc(calc(100vw / var(--gridDesktop)) * 9);
         left: calc(calc(100vw / var(--gridDesktop)) * 1);
     }
     .contentE1 {
-        width: calc(calc(100vw / var(--gridDesktop)) * 22);
-        top: calc(calc(100vw / var(--gridDesktop)) * 18);
+        width: calc(calc(100vw / var(--gridDesktop)) * 13.8);
+        top: calc(calc(100vw / var(--gridDesktop)) * 10.75);
+        left: calc(calc(100vw / var(--gridDesktop)) * 1);
+    }
+    .contentF0 {
+        width: calc(calc(100vw / var(--gridDesktop)) * 13.8);
+        top: calc(calc(100vw / var(--gridDesktop)) * 16.5);
+        left: calc(calc(100vw / var(--gridDesktop)) * 1);
+    }
+    .contentF1 {
+        width: calc(calc(100vw / var(--gridDesktop)) * 13.8);
+        top: calc(calc(100vw / var(--gridDesktop)) * 18.25);
+        left: calc(calc(100vw / var(--gridDesktop)) * 1);
+    }
+    .contentG0 {
+        width: calc(calc(100vw / var(--gridDesktop)) * 13.8);
+        top: calc(calc(100vw / var(--gridDesktop)) * 21);
+        left: calc(calc(100vw / var(--gridDesktop)) * 1);
+    }
+    .contentG1 {
+        width: calc(calc(100vw / var(--gridDesktop)) * 13.8);
+        top: calc(calc(100vw / var(--gridDesktop)) * 22.75);
+        left: calc(calc(100vw / var(--gridDesktop)) * 1);
+    }
+    .contentH0 {
+        width: calc(calc(100vw / var(--gridDesktop)) * 13.8);
+        top: calc(calc(100vw / var(--gridDesktop)) * 26);
+        left: calc(calc(100vw / var(--gridDesktop)) * 1);
+    }
+    .contentH1 {
+        width: calc(calc(100vw / var(--gridDesktop)) * 13.8);
+        top: calc(calc(100vw / var(--gridDesktop)) * 27.75);
+        left: calc(calc(100vw / var(--gridDesktop)) * 1);
+    }
+    .contentI0 {
+        width: calc(calc(100vw / var(--gridDesktop)) * 13.8);
+        top: calc(calc(100vw / var(--gridDesktop)) * 33);
+        left: calc(calc(100vw / var(--gridDesktop)) * 1);
+    }
+    .contentI1 {
+        width: calc(calc(100vw / var(--gridDesktop)) * 13.8);
+        top: calc(calc(100vw / var(--gridDesktop)) * 34.75);
+        left: calc(calc(100vw / var(--gridDesktop)) * 1);
+    }
+    .contentI2 {
+        width: calc(calc(100vw / var(--gridDesktop)) * 13.8);
+        top: calc(calc(100vw / var(--gridDesktop)) * 41.25);
+        left: calc(calc(100vw / var(--gridDesktop)) * 1);
+    }
+    .contentI3 {
+        width: calc(calc(100vw / var(--gridDesktop)) * 13.8);
+        top: calc(calc(100vw / var(--gridDesktop)) * 46.75);
+        left: calc(calc(100vw / var(--gridDesktop)) * 1);
+    }
+    .contentI4 {
+        width: calc(calc(100vw / var(--gridDesktop)) * 13.8);
+        top: calc(calc(100vw / var(--gridDesktop)) * 51.25);
+        left: calc(calc(100vw / var(--gridDesktop)) * 1);
+    }
+    .contentI5 {
+        width: calc(calc(100vw / var(--gridDesktop)) * 13.8);
+        top: calc(calc(100vw / var(--gridDesktop)) * 57.75);
         left: calc(calc(100vw / var(--gridDesktop)) * 1);
     }
 }
@@ -722,12 +817,6 @@ a:hover, svg:hover {
 
 
 
-
-/*
-
-replace grid values with variable "  --X  "
-
-*/
 
 
 /*  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE */
@@ -755,11 +844,6 @@ replace grid values with variable "  --X  "
         padding: 0;
     }
 }
-
-
-
-
-
 
 
 
@@ -889,7 +973,7 @@ replace grid values with variable "  --X  "
 add 1 to x
 add 3 to y
 each for correct view on tablet */
-@media screen and (min-width: 32rem) and (max-width : 64rem) {
+@media screen and (min-width: 32rem) and (max-width : 65rem) {
     .gridItem000 {
         grid-column: 33 / 43;
         grid-row: 7 / 22;
@@ -911,7 +995,7 @@ each for correct view on tablet */
         background: url("../assets/asset_006.jpg");
     }
 }
-@media screen and (min-width: 64rem) {
+@media screen and (min-width: 65rem) {
     .gridItem000 {
         grid-column: 32 / 42;
         grid-row: 4 / 18;
