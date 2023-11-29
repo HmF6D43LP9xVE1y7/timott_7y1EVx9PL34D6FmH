@@ -228,6 +228,9 @@ a:hover, svg:hover {
 .noIndent {
     text-indent: 0 !important;
 }
+.noMargin {
+    margin: 0 !important;
+}
 
 
 :root {
@@ -236,9 +239,6 @@ a:hover, svg:hover {
     --gridDesktop: 44;
 }
 /*                  behavior below 512 pixels       MOBILE      */
-
-
-
 @media screen and (max-width: 32rem) {
     .underline {
         text-decoration: underline calc(calc(100vw / 44) * .2);
@@ -276,7 +276,7 @@ a:hover, svg:hover {
         top: calc(calc(100vw / var(--gridMobile)) * 1);
         left: calc(calc(100vw / var(--gridMobile)) * 1);
     }
-    .topright, .centerleft, .centerright, .lightbox, .lightbox img {
+    .topright, .centerleft, .centerright, .lightbox, .lightbox img, .nonMobile {
         display: none;
     }
     .bottomleft {
@@ -365,27 +365,8 @@ a:hover, svg:hover {
         max-width: calc(calc(100vw / var(--gridMobile)) * 14);
         max-height: calc(100vh - calc(100vw / var(--gridMobile)) * 6);
     }
-    .contentA0 {
-        width: calc(calc(100vw / var(--gridMobile)) * 14);
-        top: calc(calc(100vw / var(--gridMobile)) * 2.5);
-        left: calc(calc(100vw / var(--gridMobile)) * 1);
-    }
-    .contentA1 {
-        width: calc(calc(100vw / var(--gridMobile)) * 14);
-        top: calc(calc(100vw / var(--gridMobile)) * 23.5);
-        left: calc(calc(100vw / var(--gridMobile)) * 1);
-    }
-    .contentB0 {
-        display: none;
-    }
 }
-
-
-
 /*                  behavior above 512 pixels     TABLET AND DESKTOP      */
-
-
-
 @media screen and (min-width: 32rem) {
     [class^="gridItem"] {
         background-color: transparent;
@@ -395,13 +376,7 @@ a:hover, svg:hover {
         background-color: grey;
     }
 }
-
-
-
 /*                  behavior between 512 and 768 pixels     TABLET      */
-
-
-
 @media screen and (min-width: 32rem) and (max-width : 65rem) {
     .underline {
         text-decoration: underline calc(calc(100vw / 44) * .075);
@@ -530,30 +505,9 @@ a:hover, svg:hover {
         max-width: calc(calc(100vw / var(--gridTablet)) * 34);
         max-height: calc(100vh - calc(100vw / var(--gridTablet)) * 12);
     }
-    .contentA0 {
-        width: calc(calc(100vw / var(--gridTablet)) * 26.5);
-        top: calc(calc(100vw / var(--gridTablet)) * 5);
-        left: calc(calc(100vw / var(--gridTablet)) * 2);
-    }
-    .contentA1 {
-        width: calc(calc(100vw / var(--gridTablet)) * 26.5);
-        top: calc(calc(100vw / var(--gridTablet)) * 15.75);
-        left: calc(calc(100vw / var(--gridTablet)) * 2);
-    }
-    .contentB0 {
-        top: calc(calc(100vw / var(--gridTablet)) * 5);
-        right: calc(calc(100vw / var(--gridTablet)) * 2);
-    }
 }
 /* fix optional spacing of B0 towards top, aswell as contact */
-
-
-
 /*                  behavior above 768 pixels       DESKTOP     */
-
-
-
-
 @media screen and (min-width: 65rem) {
     .underline {
         text-decoration: underline calc(calc(100vw / 44) * .04);
@@ -618,12 +572,51 @@ a:hover, svg:hover {
         grid-template-columns: repeat(var(--gridDesktop), calc(100vw / var(--gridDesktop)));
         grid-template-rows: repeat(146, calc(100vw / var(--gridDesktop)));
     }
+    #gridContainerA, #gridContainerB {
+        margin: calc(calc(100vw / var(--gridDesktop)) * 3) calc(calc(100vw / var(--gridDesktop)) * 1) calc(calc(100vw / var(--gridDesktop)) * 3) calc(calc(100vw / var(--gridDesktop)) * 1);
+    }
     #gridContainerA {
-        height: calc(calc(100vw / var(--gridDesktop)) * 15);
+        height: calc(calc(100vw / var(--gridDesktop)) * 14.5);
     }
     #gridContainerB {
-        height: calc(calc(100vw / var(--gridDesktop)) * 65.75);
+        height: calc(calc(100vw / var(--gridDesktop)) * 65.5);
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .container {
+        display: block;
+        width: calc(calc(100vw / var(--gridDesktop)) * 42);
+        height: inherit;
+    }
+    .containerSection {
+        transform: translate(0) !important;
+        width: calc(calc(100vw / var(--gridDesktop)) * 13.5);
+        margin-bottom: calc(calc(100vw / var(--gridDesktop)) * 1);
+        position: relative;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
     .observed {
         -webkit-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * 1));
         -moz-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * 1));
@@ -692,130 +685,8 @@ a:hover, svg:hover {
         max-width: calc(calc(100vw / var(--gridDesktop)) * 38);
         max-height: calc(100vh - calc(100vw / var(--gridDesktop)) * 6);
     }
-    .contentA0 {
-        width: calc(calc(100vw / var(--gridDesktop)) * 13.8);
-        top: calc(calc(100vw / var(--gridDesktop)) * 2.5);
-        left: calc(calc(100vw / var(--gridDesktop)) * 1);
-    }
-    .contentA1 {
-        width: calc(calc(100vw / var(--gridDesktop)) * 13.8);
-        top: calc(calc(100vw / var(--gridDesktop)) * 8);
-        left: calc(calc(100vw / var(--gridDesktop)) * 1);
-    }
-    .contentB0 {
-        top: calc(calc(100vw / var(--gridDesktop)) * 2.5);
-        right: calc(calc(100vw / var(--gridDesktop)) * 1);
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    .contentC0 {
-        width: calc(calc(100vw / var(--gridDesktop)) * 13.8);
-        top: calc(calc(100vw / var(--gridDesktop)) * 2.5);
-        left: calc(calc(100vw / var(--gridDesktop)) * 1);
-    }
-    .contentD0 {
-        width: calc(calc(100vw / var(--gridDesktop)) * 13.8);
-        top: calc(calc(100vw / var(--gridDesktop)) * 5);
-        left: calc(calc(100vw / var(--gridDesktop)) * 1);
-    }
-    .contentD1 {
-        width: calc(calc(100vw / var(--gridDesktop)) * 13.8);
-        top: calc(calc(100vw / var(--gridDesktop)) * 6.75);
-        left: calc(calc(100vw / var(--gridDesktop)) * 1);
-    }
-    .contentE0 {
-        width: calc(calc(100vw / var(--gridDesktop)) * 13.8);
-        top: calc(calc(100vw / var(--gridDesktop)) * 9);
-        left: calc(calc(100vw / var(--gridDesktop)) * 1);
-    }
-    .contentE1 {
-        width: calc(calc(100vw / var(--gridDesktop)) * 13.8);
-        top: calc(calc(100vw / var(--gridDesktop)) * 10.75);
-        left: calc(calc(100vw / var(--gridDesktop)) * 1);
-    }
-    .contentF0 {
-        width: calc(calc(100vw / var(--gridDesktop)) * 13.8);
-        top: calc(calc(100vw / var(--gridDesktop)) * 16.5);
-        left: calc(calc(100vw / var(--gridDesktop)) * 1);
-    }
-    .contentF1 {
-        width: calc(calc(100vw / var(--gridDesktop)) * 13.8);
-        top: calc(calc(100vw / var(--gridDesktop)) * 18.25);
-        left: calc(calc(100vw / var(--gridDesktop)) * 1);
-    }
-    .contentG0 {
-        width: calc(calc(100vw / var(--gridDesktop)) * 13.8);
-        top: calc(calc(100vw / var(--gridDesktop)) * 21);
-        left: calc(calc(100vw / var(--gridDesktop)) * 1);
-    }
-    .contentG1 {
-        width: calc(calc(100vw / var(--gridDesktop)) * 13.8);
-        top: calc(calc(100vw / var(--gridDesktop)) * 22.75);
-        left: calc(calc(100vw / var(--gridDesktop)) * 1);
-    }
-    .contentH0 {
-        width: calc(calc(100vw / var(--gridDesktop)) * 13.8);
-        top: calc(calc(100vw / var(--gridDesktop)) * 26);
-        left: calc(calc(100vw / var(--gridDesktop)) * 1);
-    }
-    .contentH1 {
-        width: calc(calc(100vw / var(--gridDesktop)) * 13.8);
-        top: calc(calc(100vw / var(--gridDesktop)) * 27.75);
-        left: calc(calc(100vw / var(--gridDesktop)) * 1);
-    }
-    .contentI0 {
-        width: calc(calc(100vw / var(--gridDesktop)) * 13.8);
-        top: calc(calc(100vw / var(--gridDesktop)) * 33);
-        left: calc(calc(100vw / var(--gridDesktop)) * 1);
-    }
-    .contentI1 {
-        width: calc(calc(100vw / var(--gridDesktop)) * 13.8);
-        top: calc(calc(100vw / var(--gridDesktop)) * 34.75);
-        left: calc(calc(100vw / var(--gridDesktop)) * 1);
-    }
-    .contentI2 {
-        width: calc(calc(100vw / var(--gridDesktop)) * 13.8);
-        top: calc(calc(100vw / var(--gridDesktop)) * 41.25);
-        left: calc(calc(100vw / var(--gridDesktop)) * 1);
-    }
-    .contentI3 {
-        width: calc(calc(100vw / var(--gridDesktop)) * 13.8);
-        top: calc(calc(100vw / var(--gridDesktop)) * 46.75);
-        left: calc(calc(100vw / var(--gridDesktop)) * 1);
-    }
-    .contentI4 {
-        width: calc(calc(100vw / var(--gridDesktop)) * 13.8);
-        top: calc(calc(100vw / var(--gridDesktop)) * 51.25);
-        left: calc(calc(100vw / var(--gridDesktop)) * 1);
-    }
-    .contentI5 {
-        width: calc(calc(100vw / var(--gridDesktop)) * 13.8);
-        top: calc(calc(100vw / var(--gridDesktop)) * 57.75);
-        left: calc(calc(100vw / var(--gridDesktop)) * 1);
-    }
 }
-
 /* END */
-
-
-
-
-
-
-
-
 
 
 
@@ -844,12 +715,6 @@ a:hover, svg:hover {
         padding: 0;
     }
 }
-
-
-
-
-
-
 
 
 @media screen and (max-width: 32rem) {
@@ -968,7 +833,6 @@ a:hover, svg:hover {
         background: url("../assets/asset_027.jpg");
     }
 }
-
 /* take values from desktop,
 add 1 to x
 add 3 to y
@@ -1107,7 +971,6 @@ each for correct view on tablet */
         background: url("../assets/asset_027.jpg");
     }
 }
-
 
 /*  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE */
 
