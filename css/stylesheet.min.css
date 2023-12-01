@@ -225,14 +225,15 @@ a:hover, svg:hover {
 .contentLarge, .contentMedium, .contentSmall {
     position: absolute;
 }
-.noIndent {
-    text-indent: 0 !important;
+.shiftY {
+    width: fit-content;
+}
+.indent {
+    text-indent: calc(calc(100vw / var(--gridDesktop)) * 2);
 }
 .noMargin {
     margin: 0 !important;
 }
-
-
 :root {
     --gridMobile: 16;
     --gridTablet: 46;
@@ -336,7 +337,6 @@ a:hover, svg:hover {
         -ms-transform: translateY(calc(calc(100vw / var(--gridMobile)) * .175));
         -o-transform: translateY(calc(calc(100vw / var(--gridMobile)) * .175));
         transform: translateY(calc(calc(100vw / var(--gridMobile)) * .175));
-        text-indent: calc(calc(100vw / var(--gridMobile)) * 2);
     }
     .parallaxLarge, .parallaxMedium {
         width: calc(calc(100vw / var(--gridMobile)) * 14);
@@ -476,7 +476,6 @@ a:hover, svg:hover {
         -ms-transform: translateY(calc(calc(100vw / var(--gridTablet)) * .175));
         -o-transform: translateY(calc(calc(100vw / var(--gridTablet)) * .175));
         transform: translateY(calc(calc(100vw / var(--gridTablet)) * .175));
-        text-indent: calc(calc(100vw / var(--gridTablet)) * 2);
     }
     .parallaxA0 {
         top: calc(calc(100vw / var(--gridTablet)) * 40);
@@ -510,7 +509,7 @@ a:hover, svg:hover {
 /*                  behavior above 768 pixels       DESKTOP     */
 @media screen and (min-width: 65rem) {
     .underline {
-        text-decoration: underline calc(calc(100vw / 44) * .04);
+        text-decoration: underline calc(calc(100vw / var(--gridDesktop)) * .04);
     }
     .fontLarge {
         font-size: calc(calc(100vw / var(--gridDesktop)) * .9);
@@ -558,6 +557,11 @@ a:hover, svg:hover {
     .bottomleft {
         bottom: calc(calc(100vw / var(--gridDesktop)) * 1);
         left: calc(calc(100vw / var(--gridDesktop)) * 1);
+        -webkit-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * .1));
+        -moz-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * .1));
+        -ms-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * .1));
+        -o-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * .1));
+        transform: translateY(calc(calc(100vw / var(--gridDesktop)) * .1));
     }
     .bottomright {
         bottom: calc(calc(100vw / var(--gridDesktop)) * 1);
@@ -572,16 +576,23 @@ a:hover, svg:hover {
         grid-template-columns: repeat(var(--gridDesktop), calc(100vw / var(--gridDesktop)));
         grid-template-rows: repeat(146, calc(100vw / var(--gridDesktop)));
     }
+    
     #gridContainerA, #gridContainerB {
-        margin: calc(calc(100vw / var(--gridDesktop)) * 3) calc(calc(100vw / var(--gridDesktop)) * 1) calc(calc(100vw / var(--gridDesktop)) * 3) calc(calc(100vw / var(--gridDesktop)) * 1);
+        margin: calc(calc(100vw / var(--gridDesktop)) * 2.6) calc(calc(100vw / var(--gridDesktop)) * 1) calc(calc(100vw / var(--gridDesktop)) * 2.45) calc(calc(100vw / var(--gridDesktop)) * 1);
     }
     #gridContainerA {
         height: calc(calc(100vw / var(--gridDesktop)) * 14.5);
     }
     #gridContainerB {
-        height: calc(calc(100vw / var(--gridDesktop)) * 65.5);
+        height: calc(calc(100vw / var(--gridDesktop)) * 63);
     }
-
+    .observed {
+        -webkit-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * 1));
+        -moz-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * 1));
+        -ms-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * 1));
+        -o-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * 1));
+        transform: translateY(calc(calc(100vw / var(--gridDesktop)) * 1));
+    }
 
 
 
@@ -595,69 +606,54 @@ a:hover, svg:hover {
 
 
     .container {
-        display: block;
         width: calc(calc(100vw / var(--gridDesktop)) * 42);
         height: inherit;
     }
     .containerSection {
-        transform: translate(0) !important;
         width: calc(calc(100vw / var(--gridDesktop)) * 13.5);
-        margin-bottom: calc(calc(100vw / var(--gridDesktop)) * 1);
         position: relative;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-    .observed {
-        -webkit-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * 1));
-        -moz-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * 1));
-        -ms-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * 1));
-        -o-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * 1));
-        transform: translateY(calc(calc(100vw / var(--gridDesktop)) * 1));
-    }
-
-
-    .parallaxLarge, .contentLarge {
+    .contentLarge {
         font-size: calc(calc(100vw / var(--gridDesktop)) * 1.8);
         line-height: calc(calc(100vw / var(--gridDesktop)) * 2);
-        /* optional line height correction */
-        -webkit-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * .35));
-        -moz-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * .35));
-        -ms-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * .35));
-        -o-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * .35));
-        transform: translateY(calc(calc(100vw / var(--gridDesktop)) * .35));
+        margin-bottom: calc(calc(100vw / var(--gridDesktop)) * .5);
     }
-    .parallaxMedium, .contentMedium {
+    .contentLarge .shiftY {
+        -webkit-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * -.1));
+        -moz-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * -.1));
+        -ms-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * -.1));
+        -o-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * -.1));
+        transform: translateY(calc(calc(100vw / var(--gridDesktop)) * -.1));
+    }
+    .contentMedium {
         font-size: calc(calc(100vw / var(--gridDesktop)) * .9);
         line-height: calc(calc(100vw / var(--gridDesktop)) * 1);
-        /* optional line height correction */
-        -webkit-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * .175));
-        -moz-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * .175));
-        -ms-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * .175));
-        -o-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * .175));
-        transform: translateY(calc(calc(100vw / var(--gridDesktop)) * .175));
-        text-indent: calc(calc(100vw / var(--gridDesktop)) * 2);
+        margin-bottom: calc(calc(100vw / var(--gridDesktop)) * 1);
+    }
+    .contentMedium .shiftY {
+        -webkit-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * .2));
+        -moz-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * .2));
+        -ms-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * .2));
+        -o-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * .2));
+        transform: translateY(calc(calc(100vw / var(--gridDesktop)) * .2));
     }
     .contentSmall {
         font-size: calc(calc(100vw / var(--gridDesktop)) * .45);
         line-height: calc(calc(100vw / var(--gridDesktop)) * .5);
-        /* optional line height correction */
-        -webkit-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * .0875));
-        -moz-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * .0875));
-        -ms-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * .0875));
-        -o-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * .0875));
-        transform: translateY(calc(calc(100vw / var(--gridDesktop)) * .0875));
-        text-indent: calc(calc(100vw / var(--gridDesktop)) * 2);
+        margin-bottom: calc(calc(100vw / var(--gridDesktop)) * .5);
     }
+    .contentSmall .shiftY {
+        -webkit-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * .1));
+        -moz-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * .1));
+        -ms-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * .1));
+        -o-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * .1));
+        transform: translateY(calc(calc(100vw / var(--gridDesktop)) * .1));
+    }
+
+
+
+
+
     .parallaxA0 {
         top: calc(calc(100vw / var(--gridDesktop)) * 40);
         left: calc(calc(100vw / var(--gridDesktop)) * 31);
@@ -689,33 +685,7 @@ a:hover, svg:hover {
 /* END */
 
 
-
-/*  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE */
-/*  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE */
-/*  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE */
-
-/* responsive on info page */
-@media screen and (max-width: 67.1rem) {
-    .responsiveLeft {
-        padding: 0;
-    }
-    .responsiveRight {
-        padding: 2rem 0 0 0;
-        clear: both;
-    }
-}
-@media screen and (min-width: 67.1rem) {
-    .responsive {
-        float: left;
-    }
-    .responsiveLeft {
-        padding: 0 2rem 0 0;
-    }
-    .responsiveRight {
-        padding: 0;
-    }
-}
-
+/* IMAGES FOLLOW    IMAGES FOLLOW    IMAGES FOLLOW    IMAGES FOLLOW    IMAGES FOLLOW    */
 
 @media screen and (max-width: 32rem) {
     .gridItem000 {
@@ -972,75 +942,13 @@ each for correct view on tablet */
     }
 }
 
-/*  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE */
-
-.anim {
-    animation: anim;
-    animation-duration: 1s;
-}
-.animLightbox {
-    animation: animLightbox;
-    animation-duration: 0.3s;
-}
-.anim,
-.animLightbox {
-    opacity: 0;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease;
-}
-@keyframes anim {
-    from {
-        -webkit-transform: translateY(2rem);
-        -moz-transform: translateY(2rem);
-        -ms-transform: translateY(2rem);
-        -o-transform: translateY(2rem);
-        transform: translateY(2rem);
-        opacity: 0;
-    }
-    to {
-        -webkit-transform: translateY(0rem);
-        -moz-transform: translateY(0rem);
-        -ms-transform: translateY(0rem);
-        -o-transform: translateY(0rem);
-        transform: translateY(0rem);
-        opacity: 1;
-    }
-}
-@keyframes animLightbox {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-.animDelayA { animation-delay: 0.2s; }
-.animDelayB { animation-delay: 0.4s; }
-.animDelayC { animation-delay: 0.6s; }
-.animDelayD { animation-delay: 0.8s; }
-.animDelayE { animation-delay: 1s; }
-.animDelayF { animation-delay: 1.2s; }
-.animDelayG { animation-delay: 1.4s; }
-.animDelayH { animation-delay: 1.6s; }
-.animDelayI { animation-delay: 1.8s; }
-.animDelayJ { animation-delay: 2s; }
-.animDelayK { animation-delay: 2.2s; }
-.animDelayL { animation-delay: 2.4s; }
-
-
-
-
-
-
-
 
 
 /*  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE */
 /*  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE */
 /*  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE */
 
-
+/*
 
 .debugCenter {
     height: 2px;
