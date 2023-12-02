@@ -619,11 +619,11 @@ a:hover, svg:hover {
         margin-bottom: calc(calc(100vw / var(--gridDesktop)) * .5);
     }
     .contentLarge .shiftY {
-        -webkit-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * -.1));
-        -moz-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * -.1));
-        -ms-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * -.1));
-        -o-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * -.1));
-        transform: translateY(calc(calc(100vw / var(--gridDesktop)) * -.1));
+        -webkit-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * .38));
+        -moz-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * .38));
+        -ms-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * .38));
+        -o-transform: translateY(calc(calc(100vw / var(--gridDesktop)) * .38));
+        transform: translateY(calc(calc(100vw / var(--gridDesktop)) * .38));
     }
     .contentMedium {
         font-size: calc(calc(100vw / var(--gridDesktop)) * .9);
@@ -948,7 +948,7 @@ each for correct view on tablet */
 /*  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE */
 /*  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE */
 
-/*
+
 
 .debugCenter {
     height: 2px;
