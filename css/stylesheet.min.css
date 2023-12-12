@@ -234,8 +234,7 @@ a:hover, svg:hover {
 .noMargin {
     margin: 0 !important;
 }
-/*                  behavior below 512 pixels       MOBILE      */
-@media screen and (max-width: 48rem) {
+@media only screen and (max-width: 48rem) {
     :root {
         --gridWidth: 16;
     }
@@ -294,13 +293,15 @@ a:hover, svg:hover {
     .gridContainer {
         grid-template-columns: repeat(var(--gridWidth), calc(100vw / var(--gridWidth)));
         grid-template-rows: repeat(259, calc(100vw / var(--gridWidth)));
-        height: calc(calc(100vw / var(--gridWidth)) * 259);
     }
-    #gridContainerA {
-        height: calc(calc(100vw / var(--gridWidth)) * 45);
+    .gridContainerInfo, .gridContainerImpressum {
+        margin: calc(calc(100vw / var(--gridWidth)) * 2.6) calc(calc(100vw / var(--gridWidth)) * 1) calc(calc(100vw / var(--gridWidth)) * 2.45) calc(calc(100vw / var(--gridWidth)) * 1);
     }
-    #gridContainerB {
-        height: calc(calc(100vw / var(--gridWidth)) * 50);
+    .gridContainerInfo {
+        height: calc(calc(100vw / var(--gridWidth)) * 46);
+    }
+    .gridContainerImpressum {
+        height: calc(calc(100vw / var(--gridWidth)) * 209);
     }
     [class^="gridItem"] {
         pointer-events: none;
@@ -316,29 +317,72 @@ a:hover, svg:hover {
 
 
 
-    .parallaxLarge, .contentLarge {
+
+
+
+
+    .container {
+        width: calc(calc(100vw / var(--gridWidth)) * 14);
+        height: inherit;
+    }
+    .containerSection {
+        width: calc(calc(100vw / var(--gridWidth)) * 14);
+        position: relative;
+    }
+    .contentLarge {
+        font-size: calc(calc(100vw / var(--gridWidth)) * 2.6);
+        line-height: calc(calc(100vw / var(--gridWidth)) * 4);
+        margin-bottom: calc(calc(100vw / var(--gridWidth)) * 1);
+    }
+    /*
+    .contentLarge .shiftY {
+        -webkit-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .38));
+        -moz-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .38));
+        -ms-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .38));
+        -o-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .38));
+        transform: translateY(calc(calc(100vw / var(--gridWidth)) * .38));
+    }
+    */
+    .contentMedium {
         font-size: calc(calc(100vw / var(--gridWidth)) * 1.8);
         line-height: calc(calc(100vw / var(--gridWidth)) * 2);
-        /* optional line height correction */
-        -webkit-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .35));
-        -moz-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .35));
-        -ms-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .35));
-        -o-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .35));
-        transform: translateY(calc(calc(100vw / var(--gridWidth)) * .35));
+        margin-bottom: calc(calc(100vw / var(--gridWidth)) * 1);
     }
-    .parallaxMedium, .contentMedium, .contentSmall {
+    /*
+    .contentMedium .shiftY {
+        -webkit-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .2));
+        -moz-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .2));
+        -ms-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .2));
+        -o-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .2));
+        transform: translateY(calc(calc(100vw / var(--gridWidth)) * .2));
+    }
+    */
+    .contentSmall {
         font-size: calc(calc(100vw / var(--gridWidth)) * .9);
         line-height: calc(calc(100vw / var(--gridWidth)) * 1);
-        /* optional line height correction */
-        -webkit-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .175));
-        -moz-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .175));
-        -ms-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .175));
-        -o-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .175));
-        transform: translateY(calc(calc(100vw / var(--gridWidth)) * .175));
+        margin-bottom: calc(calc(100vw / var(--gridWidth)) * 1);
     }
-    .parallaxLarge, .parallaxMedium {
-        width: calc(calc(100vw / var(--gridWidth)) * 14);
+    /*
+    .contentSmall .shiftY {
+        -webkit-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .1));
+        -moz-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .1));
+        -ms-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .1));
+        -o-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .1));
+        transform: translateY(calc(calc(100vw / var(--gridWidth)) * .1));
     }
+    */
+
+
+
+
+
+
+
+
+
+
+
+
     .parallaxA0 {
         top: calc(calc(100vw / var(--gridWidth)) * 47);
         left: calc(calc(100vw / var(--gridWidth)) * 1);
@@ -364,8 +408,7 @@ a:hover, svg:hover {
         max-height: calc(100vh - calc(100vw / var(--gridWidth)) * 6);
     }
 }
-/*                  behavior above 512 pixels     TABLET AND DESKTOP      */
-@media screen and (min-width: 48rem) {
+@media only screen and (min-width: 48rem) {
     [class^="gridItem"] {
         background-color: transparent;
         background-blend-mode: multiply;
@@ -374,8 +417,7 @@ a:hover, svg:hover {
         background-color: grey;
     }
 }
-/*                  behavior between 512 and 768 pixels     TABLET      */
-@media screen and (min-width: 48rem) and (max-width: 72.5rem) {
+@media only screen and (min-width: 48rem) and (max-width: 72.5rem) {
     :root {
         --gridWidth: 46;
     }
@@ -440,14 +482,16 @@ a:hover, svg:hover {
     }
     .gridContainer {
         grid-template-columns: repeat(var(--gridWidth), calc(100vw / var(--gridWidth)));
-        grid-template-rows: repeat(var(--gridWidth), calc(100vw / var(--gridWidth)));
-        height: calc(calc(100vw / var(--gridWidth)) * 146);
+        grid-template-rows: repeat(146, calc(100vw / var(--gridWidth)));
     }
-    #gridContainerA {
-        height: calc(calc(100vw / var(--gridWidth)) * 30);
+    .gridContainerInfo, .gridContainerImpressum {
+        margin: calc(calc(100vw / var(--gridWidth)) * 5.6) calc(calc(100vw / var(--gridWidth)) * 2) calc(calc(100vw / var(--gridWidth)) * 5.45) calc(calc(100vw / var(--gridWidth)) * 2);
     }
-    #gridContainerB {
-        height: calc(calc(100vw / var(--gridWidth)) * 500);
+    .gridContainerInfo {
+        height: calc(calc(100vw / var(--gridWidth)) * 27);
+    }
+    .gridContainerImpressum {
+        height: calc(calc(100vw / var(--gridWidth)) * 125);
     }
     .observed {
         -webkit-transform: translateY(calc(calc(100vw / var(--gridWidth)) * 1));
@@ -458,26 +502,63 @@ a:hover, svg:hover {
     }
 
 
-    .parallaxLarge, .contentLarge {
+
+    .container {
+        width: calc(calc(100vw / var(--gridWidth)) * 42);
+        height: inherit;
+    }
+    .containerSection {
+        width: calc(calc(100vw / var(--gridWidth)) * 27);
+        position: relative;
+    }
+    .contentLarge {
+        font-size: calc(calc(100vw / var(--gridWidth)) * 2.6);
+        line-height: calc(calc(100vw / var(--gridWidth)) * 4);
+        margin-bottom: calc(calc(100vw / var(--gridWidth)) * 1);
+    }
+    /*
+    .contentLarge .shiftY {
+        -webkit-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .38));
+        -moz-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .38));
+        -ms-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .38));
+        -o-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .38));
+        transform: translateY(calc(calc(100vw / var(--gridWidth)) * .38));
+    }
+    */
+    .contentMedium {
         font-size: calc(calc(100vw / var(--gridWidth)) * 1.8);
         line-height: calc(calc(100vw / var(--gridWidth)) * 2);
-        /* optional line height correction */
-        -webkit-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .35));
-        -moz-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .35));
-        -ms-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .35));
-        -o-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .35));
-        transform: translateY(calc(calc(100vw / var(--gridWidth)) * .35));
+        margin-bottom: calc(calc(100vw / var(--gridWidth)) * 2);
     }
-    .parallaxMedium, .contentMedium, .contentSmall {
+    /*
+    .contentMedium .shiftY {
+        -webkit-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .2));
+        -moz-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .2));
+        -ms-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .2));
+        -o-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .2));
+        transform: translateY(calc(calc(100vw / var(--gridWidth)) * .2));
+    }
+    */
+    .contentSmall {
         font-size: calc(calc(100vw / var(--gridWidth)) * .9);
         line-height: calc(calc(100vw / var(--gridWidth)) * 1);
-        /* optional line height correction */
-        -webkit-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .175));
-        -moz-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .175));
-        -ms-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .175));
-        -o-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .175));
-        transform: translateY(calc(calc(100vw / var(--gridWidth)) * .175));
+        margin-bottom: calc(calc(100vw / var(--gridWidth)) * 1);
     }
+    /*
+    .contentSmall .shiftY {
+        -webkit-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .1));
+        -moz-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .1));
+        -ms-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .1));
+        -o-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .1));
+        transform: translateY(calc(calc(100vw / var(--gridWidth)) * .1));
+    }
+    */
+
+
+
+
+
+
     .parallaxA0 {
         top: calc(calc(100vw / var(--gridWidth)) * 40);
         left: calc(calc(100vw / var(--gridWidth)) * 31);
@@ -506,9 +587,7 @@ a:hover, svg:hover {
         max-height: calc(100vh - calc(100vw / var(--gridWidth)) * 12);
     }
 }
-/* fix optional spacing of B0 towards top, aswell as contact */
-/*                  behavior above 768 pixels       DESKTOP     */
-@media screen and (min-width: 72.5rem) {
+@media only screen and (min-width: 72.5rem) {
     :root {
         --gridWidth: 44;
     }
@@ -580,14 +659,13 @@ a:hover, svg:hover {
         grid-template-columns: repeat(var(--gridWidth), calc(100vw / var(--gridWidth)));
         grid-template-rows: repeat(146, calc(100vw / var(--gridWidth)));
     }
-    
-    #gridContainerA, #gridContainerB {
+    .gridContainerInfo, .gridContainerImpressum {
         margin: calc(calc(100vw / var(--gridWidth)) * 2.6) calc(calc(100vw / var(--gridWidth)) * 1) calc(calc(100vw / var(--gridWidth)) * 2.45) calc(calc(100vw / var(--gridWidth)) * 1);
     }
-    #gridContainerA {
-        height: calc(calc(100vw / var(--gridWidth)) * 14.5);
+    .gridContainerInfo {
+        height: calc(calc(100vw / var(--gridWidth)) * 13.5);
     }
-    #gridContainerB {
+    .gridContainerImpressum {
         height: calc(calc(100vw / var(--gridWidth)) * 63);
     }
     .observed {
@@ -622,6 +700,7 @@ a:hover, svg:hover {
         line-height: calc(calc(100vw / var(--gridWidth)) * 2);
         margin-bottom: calc(calc(100vw / var(--gridWidth)) * .5);
     }
+    /*
     .contentLarge .shiftY {
         -webkit-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .38));
         -moz-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .38));
@@ -629,11 +708,13 @@ a:hover, svg:hover {
         -o-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .38));
         transform: translateY(calc(calc(100vw / var(--gridWidth)) * .38));
     }
+    */
     .contentMedium {
         font-size: calc(calc(100vw / var(--gridWidth)) * .9);
         line-height: calc(calc(100vw / var(--gridWidth)) * 1);
         margin-bottom: calc(calc(100vw / var(--gridWidth)) * 1);
     }
+    /*
     .contentMedium .shiftY {
         -webkit-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .2));
         -moz-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .2));
@@ -641,11 +722,13 @@ a:hover, svg:hover {
         -o-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .2));
         transform: translateY(calc(calc(100vw / var(--gridWidth)) * .2));
     }
+    */
     .contentSmall {
         font-size: calc(calc(100vw / var(--gridWidth)) * .45);
         line-height: calc(calc(100vw / var(--gridWidth)) * .5);
         margin-bottom: calc(calc(100vw / var(--gridWidth)) * .5);
     }
+    /*
     .contentSmall .shiftY {
         -webkit-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .1));
         -moz-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .1));
@@ -653,6 +736,8 @@ a:hover, svg:hover {
         -o-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .1));
         transform: translateY(calc(calc(100vw / var(--gridWidth)) * .1));
     }
+    */
+    
 
 
 
@@ -691,7 +776,7 @@ a:hover, svg:hover {
 
 /* IMAGES FOLLOW    IMAGES FOLLOW    IMAGES FOLLOW    IMAGES FOLLOW    IMAGES FOLLOW    */
 
-@media screen and (max-width: 48rem) {
+@media only screen and (max-width: 48rem) {
     .gridItem000 {
         grid-column: 4 / 14;
         grid-row: 4 / 18;
@@ -811,7 +896,7 @@ a:hover, svg:hover {
 add 1 to x
 add 3 to y
 each for correct view on tablet */
-@media screen and (min-width: 48rem) and (max-width: 72.5rem) {
+@media only screen and (min-width: 48rem) and (max-width: 72.5rem) {
     .gridItem000 {
         grid-column: 33 / 43;
         grid-row: 7 / 22;
@@ -833,7 +918,7 @@ each for correct view on tablet */
         background: url("../assets/asset_006.jpg");
     }
 }
-@media screen and (min-width: 72.5rem) {
+@media only screen and (min-width: 72.5rem) {
     .gridItem000 {
         grid-column: 32 / 42;
         grid-row: 4 / 18;
@@ -952,7 +1037,7 @@ each for correct view on tablet */
 /*  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE */
 /*  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE */
 
-
+/*
 
 .debugCenter {
     height: 2px;
