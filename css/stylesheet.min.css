@@ -85,16 +85,11 @@ body {
 }
 .underline {
     font-style: italic;
-    -webkit-text-decoration: underline !important;
-    -moz-text-decoration: underline !important;
-    -ms-text-decoration: underline !important;
-    -o-text-decoration: underline !important;
-    text-decoration: underline !important;
-    -webkit-text-decoration: underline calc(calc(100vw / var(--gridWidth)) * .5) !important;
-    -moz-text-decoration: underline calc(calc(100vw / var(--gridWidth)) * .5) !important;
-    -ms-text-decoration: underline calc(calc(100vw / var(--gridWidth)) * .5) !important;
-    -o-text-decoration: underline calc(calc(100vw / var(--gridWidth)) * .5) !important;
-    text-decoration: underline calc(calc(100vw / var(--gridWidth)) * .5) !important;
+    -webkit-text-decoration: underline;
+    -moz-text-decoration: underline;
+    -ms-text-decoration: underline;
+    -o-text-decoration: underline;
+    text-decoration: underline;
 }
 svg {
     position: absolute;
@@ -515,8 +510,8 @@ a:hover, svg:hover {
 
 
     .container {
+        background-color: blue;
         width: calc(calc(100vw / var(--gridWidth)) * 42);
-        height: inherit;
     }
     .containerSection {
         width: calc(calc(100vw / var(--gridWidth)) * 27);
