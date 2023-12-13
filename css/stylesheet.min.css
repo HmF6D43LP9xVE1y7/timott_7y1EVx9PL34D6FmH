@@ -89,13 +89,12 @@ body {
 
 
     /*  fix underline for safari    */
-
-
-
-    text-decoration-style: solid;
-    text-decoration-color: black;
+    -webkit-text-decoration-style: solid;
+    -webkit-text-decoration-color: black;
     -moz-text-decoration-style: solid;
     -moz-text-decoration-color: black;
+    text-decoration-style: solid;
+    text-decoration-color: black;
 }
 svg {
     position: absolute;
@@ -1037,7 +1036,7 @@ each for correct view on tablet */
 /*  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE */
 /*  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE */
 
-/*
+
 
 .debugCenter {
     height: 2px;
