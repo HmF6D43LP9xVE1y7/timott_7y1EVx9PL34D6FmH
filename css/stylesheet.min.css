@@ -85,6 +85,11 @@ body {
 }
 .underline {
     font-style: italic;
+    -webkit-text-decoration: underline !important;
+    -moz-text-decoration: underline !important;
+    -ms-text-decoration: underline !important;
+    -o-text-decoration: underline !important;
+    text-decoration: underline !important;
 }
 svg {
     position: absolute;
