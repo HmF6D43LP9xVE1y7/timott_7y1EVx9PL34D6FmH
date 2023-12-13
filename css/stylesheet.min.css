@@ -112,6 +112,7 @@ a:hover, svg:hover {
 }
 .topleft, .topright, .centerleft, .centerright, .bottomleft, .bottomright {
     position: fixed;
+    margin: 0 !important;
     z-index: 2;
 }
 .centerleft, .centerright {
@@ -145,6 +146,9 @@ a:hover, svg:hover {
     -o-transform: none !important;
     transform: none !important;
     opacity: 1 !important;
+}
+.containerSection {
+    position: absolute;
 }
 .parallax {
     height: 100vh;
@@ -216,9 +220,6 @@ a:hover, svg:hover {
 .contentB0 {
     text-align: right;
 }
-.contentLarge, .contentMedium, .contentSmall {
-    position: absolute;
-}
 .shiftY {
     width: fit-content;
 }
@@ -241,14 +242,6 @@ a:hover, svg:hover {
         text-decoration: underline black calc(calc(100vw / var(--gridWidth)) * .08);
     }
     */
-    .fontLarge, .fontMedium {
-        font-size: calc(calc(100vw / var(--gridWidth)) * 1.35);
-        line-height: calc(calc(100vw / var(--gridWidth)) * 1.5);
-    }
-    .fontSmall {
-        font-size: calc(calc(100vw / var(--gridWidth)) * 0.675);
-        line-height: calc(calc(100vw / var(--gridWidth)) * .75);
-    }
     svg {
         width: calc(calc(100vw / var(--gridWidth)) * 1.5);
         stroke-width: calc(calc(100vw / var(--gridWidth)) * .01);
@@ -297,7 +290,7 @@ a:hover, svg:hover {
         grid-template-rows: repeat(259, calc(100vw / var(--gridWidth)));
     }
     .containerInfo, .containerImpressum {
-        margin: calc(calc(100vw / var(--gridWidth)) * 2.6) calc(calc(100vw / var(--gridWidth)) * 1) calc(calc(100vw / var(--gridWidth)) * 2.45) calc(calc(100vw / var(--gridWidth)) * 1);
+        margin: calc(calc(100vw / var(--gridWidth)) * 3) calc(calc(100vw / var(--gridWidth)) * 1) calc(calc(100vw / var(--gridWidth)) * 3) calc(calc(100vw / var(--gridWidth)) * 1);
     }
     [class^="gridItem"] {
         pointer-events: none;
@@ -325,23 +318,9 @@ a:hover, svg:hover {
         width: calc(calc(100vw / var(--gridWidth)) * 14);
         position: relative;
     }
-    .contentLarge {
-        font-size: calc(calc(100vw / var(--gridWidth)) * 2.6);
-        line-height: calc(calc(100vw / var(--gridWidth)) * 4);
-        margin-bottom: calc(calc(100vw / var(--gridWidth)) * 1);
-    }
-    /*
-    .contentLarge .shiftY {
-        -webkit-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .38));
-        -moz-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .38));
-        -ms-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .38));
-        -o-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .38));
-        transform: translateY(calc(calc(100vw / var(--gridWidth)) * .38));
-    }
-    */
-    .contentMedium {
-        font-size: calc(calc(100vw / var(--gridWidth)) * 1.8);
-        line-height: calc(calc(100vw / var(--gridWidth)) * 2);
+    .contentMedium, .parallaxFontLarge {
+        font-size: calc(calc(100vw / var(--gridWidth)) * 1.35);
+        line-height: calc(calc(100vw / var(--gridWidth)) * 1.5);
         margin-bottom: calc(calc(100vw / var(--gridWidth)) * 1);
     }
     /*
@@ -353,9 +332,9 @@ a:hover, svg:hover {
         transform: translateY(calc(calc(100vw / var(--gridWidth)) * .2));
     }
     */
-    .contentSmall {
-        font-size: calc(calc(100vw / var(--gridWidth)) * .9);
-        line-height: calc(calc(100vw / var(--gridWidth)) * 1);
+    .contentSmall, .parallaxFontMedium {
+        font-size: calc(calc(100vw / var(--gridWidth)) * .675);
+        line-height: calc(calc(100vw / var(--gridWidth)) * .75);
         margin-bottom: calc(calc(100vw / var(--gridWidth)) * 1);
     }
     /*
@@ -428,15 +407,6 @@ a:hover, svg:hover {
         text-decoration: underline black calc(calc(100vw / var(--gridWidth)) * .08);
     }
     */
-    .fontLarge {
-        font-size: calc(calc(100vw / var(--gridWidth)) * 1.8);
-    }
-    .fontMedium {
-
-    }
-    .fontSmall {
-        font-size: calc(calc(100vw / var(--gridWidth)) * .9);
-    }
     svg {
         width: calc(calc(100vw / var(--gridWidth)) * 2);
         stroke-width: calc(calc(100vw / var(--gridWidth)) * .01);
@@ -509,7 +479,7 @@ a:hover, svg:hover {
         width: calc(calc(100vw / var(--gridWidth)) * 27);
         position: relative;
     }
-    .contentLarge {
+    .parallaxFontLarge {
         font-size: calc(calc(100vw / var(--gridWidth)) * 2.6);
         line-height: calc(calc(100vw / var(--gridWidth)) * 4);
         margin-bottom: calc(calc(100vw / var(--gridWidth)) * 1);
@@ -523,9 +493,9 @@ a:hover, svg:hover {
         transform: translateY(calc(calc(100vw / var(--gridWidth)) * .38));
     }
     */
-    .contentMedium {
-        font-size: calc(calc(100vw / var(--gridWidth)) * 1.8);
-        line-height: calc(calc(100vw / var(--gridWidth)) * 2);
+    .contentMedium, .parallaxFontMedium {
+        font-size: calc(calc(100vw / var(--gridWidth)) * 1.35);
+        line-height: calc(calc(100vw / var(--gridWidth)) * 1.5);
         margin-bottom: calc(calc(100vw / var(--gridWidth)) * 2);
     }
     /*
@@ -538,8 +508,8 @@ a:hover, svg:hover {
     }
     */
     .contentSmall {
-        font-size: calc(calc(100vw / var(--gridWidth)) * .9);
-        line-height: calc(calc(100vw / var(--gridWidth)) * 1);
+        font-size: calc(calc(100vw / var(--gridWidth)) * .675);
+        line-height: calc(calc(100vw / var(--gridWidth)) * .75);
         margin-bottom: calc(calc(100vw / var(--gridWidth)) * 1);
     }
     /*
@@ -600,9 +570,6 @@ a:hover, svg:hover {
     */
     .fontLarge {
         font-size: calc(calc(100vw / var(--gridWidth)) * .9);
-    }
-    .fontMedium {
-        
     }
     .fontSmall {
         font-size: calc(calc(100vw / var(--gridWidth)) * .9);
