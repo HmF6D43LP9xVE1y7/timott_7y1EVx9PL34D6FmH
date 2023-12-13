@@ -90,6 +90,11 @@ body {
     -ms-text-decoration: underline !important;
     -o-text-decoration: underline !important;
     text-decoration: underline !important;
+    -webkit-text-decoration: underline calc(calc(100vw / var(--gridWidth)) * .5) !important;
+    -moz-text-decoration: underline calc(calc(100vw / var(--gridWidth)) * .5) !important;
+    -ms-text-decoration: underline calc(calc(100vw / var(--gridWidth)) * .5) !important;
+    -o-text-decoration: underline calc(calc(100vw / var(--gridWidth)) * .5) !important;
+    text-decoration: underline calc(calc(100vw / var(--gridWidth)) * .5) !important;
 }
 svg {
     position: absolute;
