@@ -85,16 +85,6 @@ body {
 }
 .underline {
     font-style: italic;
-
-
-
-    /*  fix underline for safari    */
-    -webkit-text-decoration-style: solid;
-    -webkit-text-decoration-color: black;
-    -moz-text-decoration-style: solid;
-    -moz-text-decoration-color: black;
-    text-decoration-style: solid;
-    text-decoration-color: black;
 }
 svg {
     position: absolute;
@@ -238,7 +228,11 @@ a:hover, svg:hover {
         --gridWidth: 16;
     }
     .underline {
-        text-decoration: underline calc(calc(100vw / 44) * .2);
+        -webkit-text-decoration: underline black calc(calc(100vw / var(--gridWidth)) * .08);
+        -moz-text-decoration: underline black calc(calc(100vw / var(--gridWidth)) * .08);
+        -ms-text-decoration: underline black calc(calc(100vw / var(--gridWidth)) * .08);
+        -o-text-decoration: underline black calc(calc(100vw / var(--gridWidth)) * .08);
+        text-decoration: underline black calc(calc(100vw / var(--gridWidth)) * .08);
     }
     .fontLarge {
         font-size: calc(calc(100vw / var(--gridWidth)) * .9);
@@ -421,7 +415,11 @@ a:hover, svg:hover {
         --gridWidth: 46;
     }
     .underline {
-        text-decoration: underline calc(calc(100vw / 44) * .075);
+        -webkit-text-decoration: underline black calc(calc(100vw / var(--gridWidth)) * .08);
+        -moz-text-decoration: underline black calc(calc(100vw / var(--gridWidth)) * .08);
+        -ms-text-decoration: underline black calc(calc(100vw / var(--gridWidth)) * .08);
+        -o-text-decoration: underline black calc(calc(100vw / var(--gridWidth)) * .08);
+        text-decoration: underline black calc(calc(100vw / var(--gridWidth)) * .08);
     }
     .fontLarge {
         font-size: calc(calc(100vw / var(--gridWidth)) * 1.8);
@@ -591,7 +589,11 @@ a:hover, svg:hover {
         --gridWidth: 44;
     }
     .underline {
-        text-decoration: underline calc(calc(100vw / var(--gridWidth)) * .04);
+        -webkit-text-decoration: underline black calc(calc(100vw / var(--gridWidth)) * .04);
+        -moz-text-decoration: underline black calc(calc(100vw / var(--gridWidth)) * .04);
+        -ms-text-decoration: underline black calc(calc(100vw / var(--gridWidth)) * .04);
+        -o-text-decoration: underline black calc(calc(100vw / var(--gridWidth)) * .04);
+        text-decoration: underline black calc(calc(100vw / var(--gridWidth)) * .04);
     }
     .fontLarge {
         font-size: calc(calc(100vw / var(--gridWidth)) * .9);
