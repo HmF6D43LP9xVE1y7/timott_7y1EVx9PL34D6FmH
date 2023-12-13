@@ -494,8 +494,8 @@ a:hover, svg:hover {
     }
     */
     .contentMedium, .parallaxFontMedium {
-        font-size: calc(calc(100vw / var(--gridWidth)) * 1.35);
-        line-height: calc(calc(100vw / var(--gridWidth)) * 1.5);
+        font-size: calc(calc(100vw / var(--gridWidth)) * 1.8);
+        line-height: calc(calc(100vw / var(--gridWidth)) * 2);
         margin-bottom: calc(calc(100vw / var(--gridWidth)) * 2);
     }
     /*
@@ -508,8 +508,8 @@ a:hover, svg:hover {
     }
     */
     .contentSmall {
-        font-size: calc(calc(100vw / var(--gridWidth)) * .675);
-        line-height: calc(calc(100vw / var(--gridWidth)) * .75);
+        font-size: calc(calc(100vw / var(--gridWidth)) * .9);
+        line-height: calc(calc(100vw / var(--gridWidth)) * 1);
         margin-bottom: calc(calc(100vw / var(--gridWidth)) * 1);
     }
     /*
