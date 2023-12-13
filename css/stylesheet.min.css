@@ -386,10 +386,12 @@ a:hover, svg:hover {
     .parallaxA1 {
         top: calc(calc(100vw / var(--gridWidth)) * 50);
         left: calc(calc(100vw / var(--gridWidth)) * 1);
+        right: calc(calc(100vw / var(--gridWidth)) * 1);
     }
     .parallaxA2 {
-        top: calc(calc(100vw / var(--gridWidth)) * 64);
+        top: calc(calc(100vw / var(--gridWidth)) * 58.25);
         left: calc(calc(100vw / var(--gridWidth)) * 1);
+        right: calc(calc(100vw / var(--gridWidth)) * 1);
     }
     .parallaxB0 {
         top: calc(calc(100vw / var(--gridWidth)) * 226);
