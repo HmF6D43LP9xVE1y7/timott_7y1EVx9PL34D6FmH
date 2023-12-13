@@ -294,13 +294,13 @@ a:hover, svg:hover {
         grid-template-columns: repeat(var(--gridWidth), calc(100vw / var(--gridWidth)));
         grid-template-rows: repeat(259, calc(100vw / var(--gridWidth)));
     }
-    .gridContainerInfo, .gridContainerImpressum {
+    .containerInfo, .containerImpressum {
         margin: calc(calc(100vw / var(--gridWidth)) * 2.6) calc(calc(100vw / var(--gridWidth)) * 1) calc(calc(100vw / var(--gridWidth)) * 2.45) calc(calc(100vw / var(--gridWidth)) * 1);
     }
-    .gridContainerInfo {
+    .containerInfo {
         height: calc(calc(100vw / var(--gridWidth)) * 46);
     }
-    .gridContainerImpressum {
+    .containerImpressum {
         height: calc(calc(100vw / var(--gridWidth)) * 209);
     }
     [class^="gridItem"] {
@@ -490,13 +490,13 @@ a:hover, svg:hover {
         grid-template-columns: repeat(var(--gridWidth), calc(100vw / var(--gridWidth)));
         grid-template-rows: repeat(146, calc(100vw / var(--gridWidth)));
     }
-    .gridContainerInfo, .gridContainerImpressum {
+    .containerInfo, .containerImpressum {
         margin: calc(calc(100vw / var(--gridWidth)) * 5.6) calc(calc(100vw / var(--gridWidth)) * 2) calc(calc(100vw / var(--gridWidth)) * 5.45) calc(calc(100vw / var(--gridWidth)) * 2);
     }
-    .gridContainerInfo {
+    .containerInfo {
         height: calc(calc(100vw / var(--gridWidth)) * 27);
     }
-    .gridContainerImpressum {
+    .containerImpressum {
         height: calc(calc(100vw / var(--gridWidth)) * 125);
     }
     .observed {
@@ -509,10 +509,7 @@ a:hover, svg:hover {
 
 
 
-    .container {
-        background-color: blue;
-        width: calc(calc(100vw / var(--gridWidth)) * 42);
-    }
+
     .containerSection {
         width: calc(calc(100vw / var(--gridWidth)) * 27);
         position: relative;
@@ -671,13 +668,13 @@ a:hover, svg:hover {
         grid-template-columns: repeat(var(--gridWidth), calc(100vw / var(--gridWidth)));
         grid-template-rows: repeat(146, calc(100vw / var(--gridWidth)));
     }
-    .gridContainerInfo, .gridContainerImpressum {
+    .containerInfo, .containerImpressum {
         margin: calc(calc(100vw / var(--gridWidth)) * 2.6) calc(calc(100vw / var(--gridWidth)) * 1) calc(calc(100vw / var(--gridWidth)) * 2.45) calc(calc(100vw / var(--gridWidth)) * 1);
     }
-    .gridContainerInfo {
+    .containerInfo {
         height: calc(calc(100vw / var(--gridWidth)) * 13.5);
     }
-    .gridContainerImpressum {
+    .containerImpressum {
         height: calc(calc(100vw / var(--gridWidth)) * 63);
     }
     .observed {
@@ -693,16 +690,6 @@ a:hover, svg:hover {
 
 
 
-
-
-
-
-
-
-    .container {
-        width: calc(calc(100vw / var(--gridWidth)) * 42);
-        height: inherit;
-    }
     .containerSection {
         width: calc(calc(100vw / var(--gridWidth)) * 13.5);
         position: relative;
