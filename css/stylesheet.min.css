@@ -107,7 +107,7 @@ a:hover, svg:hover {
     opacity: .3;
     cursor: pointer;
 }
-.topright {
+.topright, .bottomright {
     text-align: right;
 }
 .topleft, .topright, .centerleft, .centerright, .bottomleft, .bottomright {
@@ -228,7 +228,7 @@ a:hover, svg:hover {
 .noMargin {
     margin: 0 !important;
 }
-@media only screen and (max-width: 48rem) {
+@media only screen and (max-width: 48rem) /* *1.5 instead of 2 */ {
     :root {
         --gridWidth: 16;
     }
@@ -241,27 +241,29 @@ a:hover, svg:hover {
         text-decoration: underline black calc(calc(100vw / var(--gridWidth)) * .08);
     }
     */
-    .fontLarge {
-        font-size: calc(calc(100vw / var(--gridWidth)) * .9);
+    .fontLarge, .fontMedium {
+        font-size: calc(calc(100vw / var(--gridWidth)) * 1.35);
+        line-height: calc(calc(100vw / var(--gridWidth)) * 1.5);
     }
     .fontSmall {
-        font-size: calc(calc(100vw / var(--gridWidth)) * .9);
+        font-size: calc(calc(100vw / var(--gridWidth)) * 0.675);
+        line-height: calc(calc(100vw / var(--gridWidth)) * .75);
     }
     svg {
-        width: calc(calc(100vw / var(--gridWidth)) * 1);
+        width: calc(calc(100vw / var(--gridWidth)) * 1.5);
         stroke-width: calc(calc(100vw / var(--gridWidth)) * .01);
     }
     #svgMail {
-        right: calc(calc(100vw / var(--gridWidth)) * 3);
+        right: calc(calc(100vw / var(--gridWidth)) * 4.5);
     }
     #svgTel {
-        right: calc(calc(100vw / var(--gridWidth)) * 1.5);
+        right: calc(calc(100vw / var(--gridWidth)) * 2.25);
     }
     #svgInstagram {
         right: calc(calc(100vw / var(--gridWidth)) * 0);
     }
     .topleft, .topright, .centerleft, .centerright, .bottomleft, .bottomright {
-        height: calc(calc(100vw / var(--gridWidth)) * 1);
+        height: calc(calc(100vw / var(--gridWidth)) * 1.5);
     }
     .topleft, .topright {
         -webkit-transform: translateY(calc(calc(100vw / var(--gridWidth)) * -.225));
@@ -426,6 +428,9 @@ a:hover, svg:hover {
     */
     .fontLarge {
         font-size: calc(calc(100vw / var(--gridWidth)) * 1.8);
+    }
+    .fontMedium {
+
     }
     .fontSmall {
         font-size: calc(calc(100vw / var(--gridWidth)) * .9);
@@ -593,6 +598,9 @@ a:hover, svg:hover {
     */
     .fontLarge {
         font-size: calc(calc(100vw / var(--gridWidth)) * .9);
+    }
+    .fontMedium {
+        
     }
     .fontSmall {
         font-size: calc(calc(100vw / var(--gridWidth)) * .9);
