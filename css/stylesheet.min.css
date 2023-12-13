@@ -269,9 +269,6 @@ a:hover, svg:hover {
         top: calc(calc(100vw / var(--gridWidth)) * 1);
         left: calc(calc(100vw / var(--gridWidth)) * 1);
     }
-    .topright, .centerleft, .centerright, .lightbox, .lightbox img, .nonMobile {
-        display: none;
-    }
     .bottomleft {
         bottom: calc(calc(100vw / var(--gridWidth)) * 1);
         left: calc(calc(100vw / var(--gridWidth)) * 1);
@@ -284,6 +281,9 @@ a:hover, svg:hover {
         -ms-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .065));
         -o-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .065));
         transform: translateY(calc(calc(100vw / var(--gridWidth)) * .065));
+    }
+    .topright, .centerleft, .centerright, .lightbox, .lightbox img, .toggle {
+        display: none;
     }
     .gridContainer {
         grid-template-columns: repeat(var(--gridWidth), calc(100vw / var(--gridWidth)));
@@ -457,6 +457,9 @@ a:hover, svg:hover {
         -o-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .13));
         transform: translateY(calc(calc(100vw / var(--gridWidth)) * .13));
     }
+    .toggle {
+        display: none;
+    }
     .gridContainer {
         grid-template-columns: repeat(var(--gridWidth), calc(100vw / var(--gridWidth)));
         grid-template-rows: repeat(146, calc(100vw / var(--gridWidth)));
@@ -479,21 +482,7 @@ a:hover, svg:hover {
         width: calc(calc(100vw / var(--gridWidth)) * 27);
         position: relative;
     }
-    .parallaxFontLarge {
-        font-size: calc(calc(100vw / var(--gridWidth)) * 2.6);
-        line-height: calc(calc(100vw / var(--gridWidth)) * 4);
-        margin-bottom: calc(calc(100vw / var(--gridWidth)) * 1);
-    }
-    /*
-    .contentLarge .shiftY {
-        -webkit-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .38));
-        -moz-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .38));
-        -ms-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .38));
-        -o-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .38));
-        transform: translateY(calc(calc(100vw / var(--gridWidth)) * .38));
-    }
-    */
-    .contentMedium, .parallaxFontMedium {
+    .contentMedium, .parallaxFontLarge {
         font-size: calc(calc(100vw / var(--gridWidth)) * 1.8);
         line-height: calc(calc(100vw / var(--gridWidth)) * 2);
         margin-bottom: calc(calc(100vw / var(--gridWidth)) * 2);
@@ -507,7 +496,7 @@ a:hover, svg:hover {
         transform: translateY(calc(calc(100vw / var(--gridWidth)) * .2));
     }
     */
-    .contentSmall {
+    .contentSmall, .parallaxFontMedium {
         font-size: calc(calc(100vw / var(--gridWidth)) * .9);
         line-height: calc(calc(100vw / var(--gridWidth)) * 1);
         margin-bottom: calc(calc(100vw / var(--gridWidth)) * 1);
@@ -629,6 +618,9 @@ a:hover, svg:hover {
         -o-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .13));
         transform: translateY(calc(calc(100vw / var(--gridWidth)) * .13));
     }
+    .toggle {
+        display: block;
+    }
     .gridContainer {
         grid-template-columns: repeat(var(--gridWidth), calc(100vw / var(--gridWidth)));
         grid-template-rows: repeat(146, calc(100vw / var(--gridWidth)));
@@ -653,7 +645,7 @@ a:hover, svg:hover {
         width: calc(calc(100vw / var(--gridWidth)) * 13.5);
         position: relative;
     }
-    .contentLarge {
+    .parallaxFontLarge {
         font-size: calc(calc(100vw / var(--gridWidth)) * 1.8);
         line-height: calc(calc(100vw / var(--gridWidth)) * 2);
         margin-bottom: calc(calc(100vw / var(--gridWidth)) * .5);
@@ -667,7 +659,7 @@ a:hover, svg:hover {
         transform: translateY(calc(calc(100vw / var(--gridWidth)) * .38));
     }
     */
-    .contentMedium {
+    .contentMedium, .parallaxFontMedium {
         font-size: calc(calc(100vw / var(--gridWidth)) * .9);
         line-height: calc(calc(100vw / var(--gridWidth)) * 1);
         margin-bottom: calc(calc(100vw / var(--gridWidth)) * 1);
