@@ -150,6 +150,7 @@ a:hover, svg:hover {
 .containerSection {
     position: absolute;
 }
+/*
 .parallax {
     height: 100vh;
     overflow-y: auto;
@@ -190,6 +191,7 @@ a:hover, svg:hover {
     -o-transform: translateZ(90px) scale(.7);
     transform: translateZ(90px) scale(.7);
 }
+*/
 .parallaxFont {
     position: absolute;
 }
@@ -1003,3 +1005,26 @@ each for correct view on tablet */
     background-color: rgba(255, 0, 0, .2);
     outline: 1px dashed black !important;
 }
+
+
+
+  .pContainer {
+    position: relative;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    perspective:.5rem;
+    perspective-origin: 0%;  
+  }
+  .pBackground {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateZ(0px);
+  }
+  .pForeground {
+    transform-origin: 0;
+    transform: translateZ(.25rem) scale(.5);
+  }
