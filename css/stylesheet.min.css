@@ -95,8 +95,8 @@ body {
     text-indent: calc(calc(100vw / var(--gridWidth)) * 2);
 }
 .alignRight {
-    text-align: right;
     position: fixed;
+    text-align: right;
 }
 svg {
     position: absolute;
@@ -292,6 +292,10 @@ a:hover, svg:hover {
     .containerInfo, .containerImpressum {
         margin: calc(calc(100vw / var(--gridWidth)) * 3) calc(calc(100vw / var(--gridWidth)) * 1) calc(calc(100vw / var(--gridWidth)) * 3) calc(calc(100vw / var(--gridWidth)) * 1);
     }
+    .containerSection {
+        width: calc(calc(100vw / var(--gridWidth)) * 14);
+        position: relative;
+    }
     [class^="gridItem"] {
         pointer-events: none;
     }
@@ -301,22 +305,6 @@ a:hover, svg:hover {
         -ms-transform: translateY(calc(calc(100vw / var(--gridWidth)) * 1));
         -o-transform: translateY(calc(calc(100vw / var(--gridWidth)) * 1));
         transform: translateY(calc(calc(100vw / var(--gridWidth)) * 1));
-    }
-
-
-
-
-
-
-
-
-    .container {
-        width: calc(calc(100vw / var(--gridWidth)) * 14);
-        height: inherit;
-    }
-    .containerSection {
-        width: calc(calc(100vw / var(--gridWidth)) * 14);
-        position: relative;
     }
     .fontMedium, .parallaxFontLarge {
         font-size: calc(calc(100vw / var(--gridWidth)) * 1.35);
@@ -341,40 +329,6 @@ a:hover, svg:hover {
         -o-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .1));
         transform: translateY(calc(calc(100vw / var(--gridWidth)) * .1));
         */
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-    .parallaxA0 {
-        top: calc(calc(100vw / var(--gridWidth)) * 47);
-        left: calc(calc(100vw / var(--gridWidth)) * 1);
-    }
-    .parallaxA1 {
-        top: calc(calc(100vw / var(--gridWidth)) * 50);
-        left: calc(calc(100vw / var(--gridWidth)) * 1);
-        right: calc(calc(100vw / var(--gridWidth)) * 1);
-    }
-    .parallaxA2 {
-        top: calc(calc(100vw / var(--gridWidth)) * 58.25);
-        left: calc(calc(100vw / var(--gridWidth)) * 1);
-        right: calc(calc(100vw / var(--gridWidth)) * 1);
-    }
-    .parallaxB0 {
-        top: calc(calc(100vw / var(--gridWidth)) * 226);
-        left: calc(calc(100vw / var(--gridWidth)) * 1);
-    }
-    .parallaxB1 {
-        top: calc(calc(100vw / var(--gridWidth)) * 229);
-        left: calc(calc(100vw / var(--gridWidth)) * 1);
     }
     .lightbox img {
         max-width: calc(calc(100vw / var(--gridWidth)) * 14);
@@ -467,20 +421,16 @@ a:hover, svg:hover {
     .containerInfo, .containerImpressum {
         margin: calc(calc(100vw / var(--gridWidth)) * 5.6) calc(calc(100vw / var(--gridWidth)) * 2) calc(calc(100vw / var(--gridWidth)) * 5.45) calc(calc(100vw / var(--gridWidth)) * 2);
     }
+    .containerSection {
+        width: calc(calc(100vw / var(--gridWidth)) * 27);
+        position: relative;
+    }
     .observed {
         -webkit-transform: translateY(calc(calc(100vw / var(--gridWidth)) * 1));
         -moz-transform: translateY(calc(calc(100vw / var(--gridWidth)) * 1));
         -ms-transform: translateY(calc(calc(100vw / var(--gridWidth)) * 1));
         -o-transform: translateY(calc(calc(100vw / var(--gridWidth)) * 1));
         transform: translateY(calc(calc(100vw / var(--gridWidth)) * 1));
-    }
-
-
-
-
-    .containerSection {
-        width: calc(calc(100vw / var(--gridWidth)) * 27);
-        position: relative;
     }
     .fontMedium, .parallaxFontLarge {
         font-size: calc(calc(100vw / var(--gridWidth)) * 1.8);
@@ -506,35 +456,6 @@ a:hover, svg:hover {
         transform: translateY(calc(calc(100vw / var(--gridWidth)) * .1));
         */
     }
-
-
-
-
-
-
-    .parallaxA0 {
-        top: calc(calc(100vw / var(--gridWidth)) * 40);
-        left: calc(calc(100vw / var(--gridWidth)) * 31);
-    }
-    .parallaxA1 {
-        width: calc(calc(100vw / var(--gridWidth)) * 26);
-        top: calc(calc(100vw / var(--gridWidth)) * 43);
-        left: calc(calc(100vw / var(--gridWidth)) * 17);
-    }
-    .parallaxA2 {
-        width: calc(calc(100vw / var(--gridWidth)) * 26);
-        top: calc(calc(100vw / var(--gridWidth)) * 50);
-        left: calc(calc(100vw / var(--gridWidth)) * 17);
-    }
-    .parallaxB0 {
-        top: calc(calc(100vw / var(--gridWidth)) * 156);
-        left: calc(calc(100vw / var(--gridWidth)) * 1);
-    }
-    .parallaxB1 {
-        width: calc(calc(100vw / var(--gridWidth)) * 24);
-        top: calc(calc(100vw / var(--gridWidth)) * 159);
-        left: calc(calc(100vw / var(--gridWidth)) * 3);
-    }
     .lightbox img {
         max-width: calc(calc(100vw / var(--gridWidth)) * 34);
         max-height: calc(100vh - calc(100vw / var(--gridWidth)) * 12);
@@ -556,12 +477,6 @@ a:hover, svg:hover {
     .alignRight {
         top: calc(calc(100vw / var(--gridWidth)) * 2.6);
         right: calc(calc(100vw / var(--gridWidth)) * 1);
-    }
-    .fontLarge {
-        font-size: calc(calc(100vw / var(--gridWidth)) * .9);
-    }
-    .fontSmall {
-        font-size: calc(calc(100vw / var(--gridWidth)) * .9);
     }
     svg {
         width: calc(calc(100vw / var(--gridWidth)) * 1);
@@ -628,22 +543,16 @@ a:hover, svg:hover {
     .containerInfo, .containerImpressum {
         margin: calc(calc(100vw / var(--gridWidth)) * 2.6) calc(calc(100vw / var(--gridWidth)) * 1) calc(calc(100vw / var(--gridWidth)) * 2.45) calc(calc(100vw / var(--gridWidth)) * 1);
     }
+    .containerSection {
+        width: calc(calc(100vw / var(--gridWidth)) * 13.5);
+        position: relative;
+    }
     .observed {
         -webkit-transform: translateY(calc(calc(100vw / var(--gridWidth)) * 1));
         -moz-transform: translateY(calc(calc(100vw / var(--gridWidth)) * 1));
         -ms-transform: translateY(calc(calc(100vw / var(--gridWidth)) * 1));
         -o-transform: translateY(calc(calc(100vw / var(--gridWidth)) * 1));
         transform: translateY(calc(calc(100vw / var(--gridWidth)) * 1));
-    }
-
-
-
-
-
-
-    .containerSection {
-        width: calc(calc(100vw / var(--gridWidth)) * 13.5);
-        position: relative;
     }
     .parallaxFontLarge {
         font-size: calc(calc(100vw / var(--gridWidth)) * 1.8);
@@ -681,11 +590,43 @@ a:hover, svg:hover {
         transform: translateY(calc(calc(100vw / var(--gridWidth)) * .1));
         */
     }
+    .lightbox img {
+        max-width: calc(calc(100vw / var(--gridWidth)) * 38);
+        max-height: calc(100vh - calc(100vw / var(--gridWidth)) * 6);
+    }
+}
 
 
 
+/* font positioning */
 
 
+
+@media only screen and (max-width: 48rem) {
+    .parallaxA0 {
+        top: calc(calc(100vw / var(--gridWidth)) * 47);
+        left: calc(calc(100vw / var(--gridWidth)) * 1);
+    }
+    .parallaxA1 {
+        top: calc(calc(100vw / var(--gridWidth)) * 50);
+        left: calc(calc(100vw / var(--gridWidth)) * 1);
+        right: calc(calc(100vw / var(--gridWidth)) * 1);
+    }
+    .parallaxA2 {
+        top: calc(calc(100vw / var(--gridWidth)) * 58.25);
+        left: calc(calc(100vw / var(--gridWidth)) * 1);
+        right: calc(calc(100vw / var(--gridWidth)) * 1);
+    }
+    .parallaxB0 {
+        top: calc(calc(100vw / var(--gridWidth)) * 226);
+        left: calc(calc(100vw / var(--gridWidth)) * 1);
+    }
+    .parallaxB1 {
+        top: calc(calc(100vw / var(--gridWidth)) * 229);
+        left: calc(calc(100vw / var(--gridWidth)) * 1);
+    }
+}
+@media only screen and (min-width: 48rem) and (max-width: 72.5rem) {
     .parallaxA0 {
         top: calc(calc(100vw / var(--gridWidth)) * 40);
         left: calc(calc(100vw / var(--gridWidth)) * 31);
@@ -709,15 +650,38 @@ a:hover, svg:hover {
         top: calc(calc(100vw / var(--gridWidth)) * 159);
         left: calc(calc(100vw / var(--gridWidth)) * 3);
     }
-    .lightbox img {
-        max-width: calc(calc(100vw / var(--gridWidth)) * 38);
-        max-height: calc(100vh - calc(100vw / var(--gridWidth)) * 6);
+}
+@media only screen and (min-width: 72.5rem) {
+    .parallaxA0 {
+        top: calc(calc(100vw / var(--gridWidth)) * 40);
+        left: calc(calc(100vw / var(--gridWidth)) * 31);
+    }
+    .parallaxA1 {
+        width: calc(calc(100vw / var(--gridWidth)) * 26);
+        top: calc(calc(100vw / var(--gridWidth)) * 43);
+        left: calc(calc(100vw / var(--gridWidth)) * 17);
+    }
+    .parallaxA2 {
+        width: calc(calc(100vw / var(--gridWidth)) * 26);
+        top: calc(calc(100vw / var(--gridWidth)) * 50);
+        left: calc(calc(100vw / var(--gridWidth)) * 17);
+    }
+    .parallaxB0 {
+        top: calc(calc(100vw / var(--gridWidth)) * 156);
+        left: calc(calc(100vw / var(--gridWidth)) * 1);
+    }
+    .parallaxB1 {
+        width: calc(calc(100vw / var(--gridWidth)) * 24);
+        top: calc(calc(100vw / var(--gridWidth)) * 159);
+        left: calc(calc(100vw / var(--gridWidth)) * 3);
     }
 }
-/* END */
 
 
-/* IMAGES FOLLOW    IMAGES FOLLOW    IMAGES FOLLOW    IMAGES FOLLOW    IMAGES FOLLOW    */
+
+/* image positioning */
+
+
 
 @media only screen and (max-width: 48rem) {
     .gridItem000 {
@@ -835,11 +799,11 @@ a:hover, svg:hover {
         background: url("../assets/asset_027.jpg");
     }
 }
-/* take values from desktop,
-add 1 to x
-add 3 to y
-each for correct view on tablet */
 @media only screen and (min-width: 48rem) and (max-width: 72.5rem) {
+    /* take values from desktop,
+    add 1 to x
+    add 3 to y
+    each for correct view on tablet */
     .gridItem000 {
         grid-column: 33 / 43;
         grid-row: 7 / 22;
@@ -974,12 +938,9 @@ each for correct view on tablet */
     }
 }
 
-/* content positioning */
 
 
-/*  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE */
-/*  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE */
-/*  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE  DELETE */
+/* debug */
 
 
 
