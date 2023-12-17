@@ -150,48 +150,46 @@ a:hover, svg:hover {
 .containerSection {
     position: absolute;
 }
-/*
-.parallax {
-    height: 100vh;
-    overflow-y: auto;
-    overflow-x: hidden;
-    -webkit-perspective: 18.75rem;
-    perspective: 18.75rem;
-    -webkit-perspective-origin: 50%;
-    perspective-origin: 50%;
-}
-.parallaxGroup {
+.parallaxContainer {
     position: relative;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-perspective: 1rem;
+    -moz-perspective: 1rem;
+    -ms-perspective: 1rem;
+    -o-perspective: 1rem;
+    perspective: 1rem;
+    -webkit-perspective-origin: 0%;
+    -moz-perspective-origin: 0%;
+    -ms-perspective-origin: 0%;
+    -o-perspective-origin: 0%;
+    perspective-origin: 0%;
 }
-.parallaxLayer {
+.parallaxBackground {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    -webkit-perspective-origin: 100%;
-    perspective-origin: 100%;
-}
-.parallaxLayerBase {
     -webkit-transform: translateZ(0);
     -moz-transform: translateZ(0);
     -ms-transform: translateZ(0);
     -o-transform: translateZ(0);
     transform: translateZ(0);
 }
-.parallaxLayerForeground {
-    line-height: 4rem;
-    height: 2rem;
-    background-color: rgba(0, 255, 0, .2);
-    -webkit-transform: translateZ(90px) scale(.7);
-    -moz-transform: translateZ(90px) scale(.7);
-    -ms-transform: translateZ(90px) scale(.7);
-    -o-transform: translateZ(90px) scale(.7);
-    transform: translateZ(90px) scale(.7);
+.parallaxForeground {
+    -webkit-transform-origin: 0;
+    -moz-transform-origin: 0;
+    -ms-transform-origin: 0;
+    -o-transform-origin: 0;
+    transform-origin: 0;
+    -webkit-transform: translateZ(.5rem) scale(.5);
+    -moz-transform: translateZ(.5rem) scale(.5);
+    -ms-transform: translateZ(.5rem) scale(.5);
+    -o-transform: translateZ(.5rem) scale(.5);
+    transform: translateZ(.5rem) scale(.5);
 }
-*/
 .parallaxFont {
     position: absolute;
 }
@@ -487,7 +485,7 @@ a:hover, svg:hover {
     .fontMedium, .parallaxFontLarge {
         font-size: calc(calc(100vw / var(--gridWidth)) * 1.8);
         line-height: calc(calc(100vw / var(--gridWidth)) * 2);
-        margin-bottom: calc(calc(100vw / var(--gridWidth)) * 2);
+        margin-bottom: calc(calc(100vw / var(--gridWidth)) * 1);
     }
     /*
     .fontMedium .shiftY {
@@ -501,7 +499,7 @@ a:hover, svg:hover {
     .fontSmall, .parallaxFontMedium {
         font-size: calc(calc(100vw / var(--gridWidth)) * .9);
         line-height: calc(calc(100vw / var(--gridWidth)) * 1);
-        margin-bottom: calc(calc(100vw / var(--gridWidth)) * 1);
+        margin-bottom: calc(calc(100vw / var(--gridWidth)) * 2);
     }
     /*
     .fontSmall .shiftY {
@@ -664,7 +662,7 @@ a:hover, svg:hover {
     .fontMedium, .parallaxFontMedium {
         font-size: calc(calc(100vw / var(--gridWidth)) * .9);
         line-height: calc(calc(100vw / var(--gridWidth)) * 1);
-        margin-bottom: calc(calc(100vw / var(--gridWidth)) * 1);
+        margin-bottom: calc(calc(100vw / var(--gridWidth)) * .5);
     }
     /*
     .fontMedium .shiftY {
@@ -678,7 +676,7 @@ a:hover, svg:hover {
     .fontSmall {
         font-size: calc(calc(100vw / var(--gridWidth)) * .45);
         line-height: calc(calc(100vw / var(--gridWidth)) * .5);
-        margin-bottom: calc(calc(100vw / var(--gridWidth)) * .5);
+        margin-bottom: calc(calc(100vw / var(--gridWidth)) * 1);
     }
     /*
     .fontSmall .shiftY {
@@ -1008,23 +1006,3 @@ each for correct view on tablet */
 
 
 
-  .pContainer {
-    position: relative;
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    perspective:.5rem;
-    perspective-origin: 0%;  
-  }
-  .pBackground {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    transform: translateZ(0px);
-  }
-  .pForeground {
-    transform-origin: 0;
-    transform: translateZ(.25rem) scale(.5);
-  }
