@@ -636,18 +636,19 @@ a:hover, svg:hover {
 }
 @media only screen and (min-width: 48rem) and (max-width: 72.5rem) {
     .parallaxOubliettesA {
+        width: calc(calc(100vw / var(--gridWidth)) * 8);
         top: calc(calc(100vw / var(--gridWidth)) * 40);
-        left: calc(calc(100vw / var(--gridWidth)) * 31);
+        right: calc(calc(100vw / var(--gridWidth)) * 6);
     }
     .parallaxOubliettesB {
         width: calc(calc(100vw / var(--gridWidth)) * 26);
         top: calc(calc(100vw / var(--gridWidth)) * 43);
-        left: calc(calc(100vw / var(--gridWidth)) * 17);
+        right: calc(calc(100vw / var(--gridWidth)) * 4);
     }
     .parallaxOubliettesC {
         width: calc(calc(100vw / var(--gridWidth)) * 26);
         top: calc(calc(100vw / var(--gridWidth)) * 50);
-        left: calc(calc(100vw / var(--gridWidth)) * 17);
+        right: calc(calc(100vw / var(--gridWidth)) * 4);
     }
     .parallaxBuechehofA {
         top: calc(calc(100vw / var(--gridWidth)) * 156);
@@ -713,23 +714,23 @@ a:hover, svg:hover {
         grid-row: 4 / 18;
         background: url("../assets/asset_000.jpg");
     }
+    /*
     .gridItem002 {
         grid-column: 9 / 16;
         grid-row: 20 / 30;
         background: url("../assets/asset_002.jpg");
     }
-    /*
     .gridItem001 {
         grid-column: 2 / 16;
         grid-row: 32 / 42;
         background: url("../assets/asset_001.jpg");
     }
+    */
     .gridItem003 {
         grid-column: 4 / 14;
         grid-row: 47 / 54;
         background: url("../assets/asset_006.jpg");
     }
-    */
     .gridItem004 {
         grid-column: 2 / 16;
         grid-row: 56 / 66;
