@@ -603,77 +603,101 @@ a:hover, svg:hover {
 
 
 @media only screen and (max-width: 48rem) {
-    .parallaxA0 {
+    .parallaxOubliettesA {
         top: calc(calc(100vw / var(--gridWidth)) * 47);
         left: calc(calc(100vw / var(--gridWidth)) * 1);
     }
-    .parallaxA1 {
+    .parallaxOubliettesB {
         top: calc(calc(100vw / var(--gridWidth)) * 50);
         left: calc(calc(100vw / var(--gridWidth)) * 1);
         right: calc(calc(100vw / var(--gridWidth)) * 1);
     }
-    .parallaxA2 {
+    .parallaxOubliettesC {
         top: calc(calc(100vw / var(--gridWidth)) * 58.25);
         left: calc(calc(100vw / var(--gridWidth)) * 1);
         right: calc(calc(100vw / var(--gridWidth)) * 1);
     }
-    .parallaxB0 {
+    .parallaxBuechehofA {
         top: calc(calc(100vw / var(--gridWidth)) * 226);
         left: calc(calc(100vw / var(--gridWidth)) * 1);
     }
-    .parallaxB1 {
+    .parallaxBuechehofB {
         top: calc(calc(100vw / var(--gridWidth)) * 229);
         left: calc(calc(100vw / var(--gridWidth)) * 1);
     }
+    .parallaxCasaIbossimA {
+        top: calc(calc(100vw / var(--gridWidth)) * 480);
+        right: calc(calc(100vw / var(--gridWidth)) * 1);
+    }
+    .parallaxCasaIbossimB {
+        top: calc(calc(100vw / var(--gridWidth)) * 483);
+        right: calc(calc(100vw / var(--gridWidth)) * 1);
+    }
 }
 @media only screen and (min-width: 48rem) and (max-width: 72.5rem) {
-    .parallaxA0 {
+    .parallaxOubliettesA {
         top: calc(calc(100vw / var(--gridWidth)) * 40);
         left: calc(calc(100vw / var(--gridWidth)) * 31);
     }
-    .parallaxA1 {
+    .parallaxOubliettesB {
         width: calc(calc(100vw / var(--gridWidth)) * 26);
         top: calc(calc(100vw / var(--gridWidth)) * 43);
         left: calc(calc(100vw / var(--gridWidth)) * 17);
     }
-    .parallaxA2 {
+    .parallaxOubliettesC {
         width: calc(calc(100vw / var(--gridWidth)) * 26);
         top: calc(calc(100vw / var(--gridWidth)) * 50);
         left: calc(calc(100vw / var(--gridWidth)) * 17);
     }
-    .parallaxB0 {
+    .parallaxBuechehofA {
         top: calc(calc(100vw / var(--gridWidth)) * 156);
-        left: calc(calc(100vw / var(--gridWidth)) * 1);
+        left: calc(calc(100vw / var(--gridWidth)) * 2);
     }
-    .parallaxB1 {
+    .parallaxBuechehofB {
         width: calc(calc(100vw / var(--gridWidth)) * 24);
         top: calc(calc(100vw / var(--gridWidth)) * 159);
-        left: calc(calc(100vw / var(--gridWidth)) * 3);
+        left: calc(calc(100vw / var(--gridWidth)) * 4);
+    }
+    .parallaxCasaIbossimA {
+        top: calc(calc(100vw / var(--gridWidth)) * 226);
+        right: calc(calc(100vw / var(--gridWidth)) * 2);
+    }
+    .parallaxCasaIbossimB {
+        top: calc(calc(100vw / var(--gridWidth)) * 229);
+        right: calc(calc(100vw / var(--gridWidth)) * 2);
     }
 }
 @media only screen and (min-width: 72.5rem) {
-    .parallaxA0 {
+    .parallaxOubliettesA {
         top: calc(calc(100vw / var(--gridWidth)) * 40);
         left: calc(calc(100vw / var(--gridWidth)) * 31);
     }
-    .parallaxA1 {
+    .parallaxOubliettesB {
         width: calc(calc(100vw / var(--gridWidth)) * 26);
         top: calc(calc(100vw / var(--gridWidth)) * 43);
         left: calc(calc(100vw / var(--gridWidth)) * 17);
     }
-    .parallaxA2 {
+    .parallaxOubliettesC {
         width: calc(calc(100vw / var(--gridWidth)) * 26);
         top: calc(calc(100vw / var(--gridWidth)) * 50);
         left: calc(calc(100vw / var(--gridWidth)) * 17);
     }
-    .parallaxB0 {
+    .parallaxBuechehofA {
         top: calc(calc(100vw / var(--gridWidth)) * 156);
         left: calc(calc(100vw / var(--gridWidth)) * 1);
     }
-    .parallaxB1 {
+    .parallaxBuechehofB {
         width: calc(calc(100vw / var(--gridWidth)) * 24);
         top: calc(calc(100vw / var(--gridWidth)) * 159);
         left: calc(calc(100vw / var(--gridWidth)) * 3);
+    }
+    .parallaxCasaIbossimA {
+        top: calc(calc(100vw / var(--gridWidth)) * 233);
+        right: calc(calc(100vw / var(--gridWidth)) * 11);
+    }
+    .parallaxCasaIbossimB {
+        top: calc(calc(100vw / var(--gridWidth)) * 236);
+        right: calc(calc(100vw / var(--gridWidth)) * 11);
     }
 }
 
