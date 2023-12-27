@@ -192,11 +192,11 @@ a:hover, svg:hover {
     -ms-transform-origin: 0;
     -o-transform-origin: 0;
     transform-origin: 0;
-    -webkit-transform: translateZ(.5rem) scale(.5);
-    -moz-transform: translateZ(.5rem) scale(.5);
-    -ms-transform: translateZ(.5rem) scale(.5);
-    -o-transform: translateZ(.5rem) scale(.5);
-    transform: translateZ(.5rem) scale(.5);
+    -webkit-transform: translateZ(.35rem) scale(.65);
+    -moz-transform: translateZ(.35rem) scale(.65);
+    -ms-transform: translateZ(.35rem) scale(.65);
+    -o-transform: translateZ(.35rem) scale(.65);
+    transform: translateZ(.35rem) scale(.65);
     pointer-events: none;
 }
 .parallaxFont {
