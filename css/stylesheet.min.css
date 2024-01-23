@@ -598,6 +598,57 @@ a:hover, svg:hover {
 
 
 
+
+
+
+
+
+/* widescreens */
+@media only screen and (min-width: 72.5rem) and (min-aspect-ratio: 21/9) {
+    :root {
+        --gridWidth: 44;
+        --viewWidth: 50vw;
+    }
+    .gridContainer {
+        margin: 0 25vw 0 25vw;
+        grid-template-columns: repeat(var(--gridWidth), calc(var(--viewWidth) / var(--gridWidth)));
+        grid-template-rows: repeat(146, calc(var(--viewWidth) / var(--gridWidth)));
+    }
+    /*
+    .containerInfo, .containerImpressum {
+        margin: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2.6) calc(calc(var(--viewWidth) / var(--gridWidth)) * 1) calc(calc(var(--viewWidth) / var(--gridWidth)) * 2.45) calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
+    }
+    */
+    .containerSection {
+        width: calc(calc(var(--viewWidth) / var(--gridWidth)) * 13.5);
+        position: relative;
+    }
+    .observed {
+        -webkit-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * 1));
+        -moz-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * 1));
+        -ms-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * 1));
+        -o-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * 1));
+        transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * 1));
+    }
+    .parallaxFontLarge {
+        font-size: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1.8);
+        line-height: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2);
+        margin-bottom: calc(calc(var(--viewWidth) / var(--gridWidth)) * .5);
+    }
+    .fontMedium, .parallaxFontMedium {
+        font-size: calc(calc(var(--viewWidth) / var(--gridWidth)) * .9);
+        line-height: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
+        margin-bottom: calc(calc(var(--viewWidth) / var(--gridWidth)) * .5);
+    }
+    .fontSmall {
+        font-size: calc(calc(var(--viewWidth) / var(--gridWidth)) * .45);
+        line-height: calc(calc(var(--viewWidth) / var(--gridWidth)) * .5);
+        margin-bottom: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
+    }
+}
+
+
+
 /* font positioning */
 
 
@@ -699,6 +750,58 @@ a:hover, svg:hover {
     .parallaxCasaIbossimB {
         top: calc(calc(100vw / var(--gridWidth)) * 236);
         right: calc(calc(100vw / var(--gridWidth)) * 11);
+    }
+}
+
+
+
+
+/* widescreens */
+@media only screen and (min-width: 72.5rem) and (min-aspect-ratio: 21/9) {
+    .parallaxOubliettesA {
+        margin: 0 25vw 0 25vw;
+        
+        top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 40);
+        left: calc(calc(var(--viewWidth) / var(--gridWidth)) * 31);
+    }
+    .parallaxOubliettesB {
+        margin: 0 25vw 0 25vw;
+
+        width: calc(calc(var(--viewWidth) / var(--gridWidth)) * 26);
+        top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 43);
+        left: calc(calc(var(--viewWidth) / var(--gridWidth)) * 17);
+    }
+    .parallaxOubliettesC {
+        margin: 0 25vw 0 25vw;
+
+        width: calc(calc(var(--viewWidth) / var(--gridWidth)) * 26);
+        top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 50);
+        left: calc(calc(var(--viewWidth) / var(--gridWidth)) * 17);
+    }
+    .parallaxBuechehofA {
+        margin: 0 25vw 0 25vw;
+
+        top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 156);
+        left: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
+    }
+    .parallaxBuechehofB {
+        margin: 0 25vw 0 25vw;
+
+        width: calc(calc(var(--viewWidth) / var(--gridWidth)) * 24);
+        top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 159);
+        left: calc(calc(var(--viewWidth) / var(--gridWidth)) * 3);
+    }
+    .parallaxCasaIbossimA {
+        margin: 0 25vw 0 25vw;
+
+        top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 233);
+        right: calc(calc(var(--viewWidth) / var(--gridWidth)) * 11);
+    }
+    .parallaxCasaIbossimB {
+        margin: 0 25vw 0 25vw;
+
+        top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 236);
+        right: calc(calc(var(--viewWidth) / var(--gridWidth)) * 11);
     }
 }
 
@@ -964,8 +1067,7 @@ a:hover, svg:hover {
 }
 
 
-
-/* debug *//*
+/* debug */
 
 
 
@@ -984,6 +1086,5 @@ a:hover, svg:hover {
     background-color: rgba(255, 0, 0, .2);
     outline: 1px dashed black !important;
 }
-
 
 
