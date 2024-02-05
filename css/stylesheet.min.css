@@ -229,6 +229,9 @@ a:hover, svg:hover {
 .noMargin {
     margin: 0 !important;
 }
+
+/* MOBILE */
+
 @media only screen and (max-width: 48rem) {
     :root {
         --gridWidth: 16;
@@ -306,7 +309,7 @@ a:hover, svg:hover {
         -o-transform: translateY(calc(calc(100vw / var(--gridWidth)) * 1));
         transform: translateY(calc(calc(100vw / var(--gridWidth)) * 1));
     }
-    .fontMedium, .parallaxFontLarge {
+    .fontM, .parallaxfontL {
         font-size: calc(calc(100vw / var(--gridWidth)) * 1.35);
         line-height: calc(calc(100vw / var(--gridWidth)) * 1.5);
         margin-bottom: calc(calc(100vw / var(--gridWidth)) * 1);
@@ -318,7 +321,7 @@ a:hover, svg:hover {
         transform: translateY(calc(calc(100vw / var(--gridWidth)) * .2));
         */
     }
-    .fontSmall, .parallaxFontMedium {
+    .fontS, .parallaxfontM {
         font-size: calc(calc(100vw / var(--gridWidth)) * .675);
         line-height: calc(calc(100vw / var(--gridWidth)) * .75);
         margin-bottom: calc(calc(100vw / var(--gridWidth)) * 1);
@@ -335,6 +338,9 @@ a:hover, svg:hover {
         max-height: calc(100vh - calc(100vw / var(--gridWidth)) * 6);
     }
 }
+
+/* EXCEPT MOBILE */
+
 @media only screen and (min-width: 48rem) {
     [class^="gridItem"] {
         background-color: transparent;
@@ -344,6 +350,9 @@ a:hover, svg:hover {
         background-color: grey;
     }
 }
+
+/* TABLET */
+
 @media only screen and (min-width: 48rem) and (max-width: 72.5rem) {
     :root {
         --gridWidth: 46;
@@ -432,7 +441,7 @@ a:hover, svg:hover {
         -o-transform: translateY(calc(calc(100vw / var(--gridWidth)) * 1));
         transform: translateY(calc(calc(100vw / var(--gridWidth)) * 1));
     }
-    .fontMedium, .parallaxFontLarge {
+    .fontM, .parallaxfontL {
         font-size: calc(calc(100vw / var(--gridWidth)) * 1.8);
         line-height: calc(calc(100vw / var(--gridWidth)) * 2);
         margin-bottom: calc(calc(100vw / var(--gridWidth)) * 1);
@@ -444,7 +453,7 @@ a:hover, svg:hover {
         transform: translateY(calc(calc(100vw / var(--gridWidth)) * .2));
         */
     }
-    .fontSmall, .parallaxFontMedium {
+    .fontS, .parallaxfontM {
         font-size: calc(calc(100vw / var(--gridWidth)) * .9);
         line-height: calc(calc(100vw / var(--gridWidth)) * 1);
         margin-bottom: calc(calc(100vw / var(--gridWidth)) * 2);
@@ -461,6 +470,9 @@ a:hover, svg:hover {
         max-height: calc(100vh - calc(100vw / var(--gridWidth)) * 12);
     }
 }
+
+/* DESKTOP */
+
 @media only screen and (min-width: 72.5rem) {
     :root {
         --gridWidth: 44;
@@ -554,7 +566,7 @@ a:hover, svg:hover {
         -o-transform: translateY(calc(calc(100vw / var(--gridWidth)) * 1));
         transform: translateY(calc(calc(100vw / var(--gridWidth)) * 1));
     }
-    .parallaxFontLarge {
+    .parallaxfontL {
         font-size: calc(calc(100vw / var(--gridWidth)) * 1.8);
         line-height: calc(calc(100vw / var(--gridWidth)) * 2);
         margin-bottom: calc(calc(100vw / var(--gridWidth)) * .5);
@@ -566,7 +578,7 @@ a:hover, svg:hover {
         transform: translateY(calc(calc(100vw / var(--gridWidth)) * .38));
         */
     }
-    .fontMedium, .parallaxFontMedium {
+    .fontM, .parallaxfontM {
         font-size: calc(calc(100vw / var(--gridWidth)) * .9);
         line-height: calc(calc(100vw / var(--gridWidth)) * 1);
         margin-bottom: calc(calc(100vw / var(--gridWidth)) * .5);
@@ -578,7 +590,7 @@ a:hover, svg:hover {
         transform: translateY(calc(calc(100vw / var(--gridWidth)) * .2));
         */
     }
-    .fontSmall {
+    .fontS {
         font-size: calc(calc(100vw / var(--gridWidth)) * .45);
         line-height: calc(calc(100vw / var(--gridWidth)) * .5);
         margin-bottom: calc(calc(100vw / var(--gridWidth)) * 1);
@@ -596,29 +608,84 @@ a:hover, svg:hover {
     }
 }
 
+/* ULTRAWIDE */
 
-
-
-
-
-
-
-/* widescreens */
 @media only screen and (min-width: 72.5rem) and (min-aspect-ratio: 21/9) {
     :root {
         --gridWidth: 44;
         --viewWidth: 50vw;
+        --margin: 25vw;
+    }
+    .alignRight {
+        top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2.6);
+        right: calc(calc(calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
+    }
+    svg {
+        width: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
+        stroke-width: calc(calc(var(--viewWidth) / var(--gridWidth)) * .01);
+    }
+    #svgMail {
+        right: calc(calc(var(--viewWidth) / var(--gridWidth)) * 3);
+    }
+    #svgTel {
+        right: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1.5);
+    }
+    #svgInstagram {
+        right: calc(calc(var(--viewWidth) / var(--gridWidth)) * 0);
+    }
+    .topleft, .topright, .centerleft, .centerright, .bottomleft, .bottomright {
+        height: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
+    }
+    .topleft, .topright {
+        -webkit-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * -.275));
+        -moz-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * -.275));
+        -ms-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * -.275));
+        -o-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * -.275));
+        transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * -.275));
+    }
+    .topleft {
+        top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
+        left: calc(calc(calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
+    }
+    .topright {
+        top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
+        right: calc(calc(calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
+    }
+    .centerleft {
+        left: calc(calc(calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
+    }
+    .centerright {
+        right: calc(calc(calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
+    }
+    .bottomleft {
+        bottom: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
+        left: calc(calc(calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
+        -webkit-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .1));
+        -moz-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .1));
+        -ms-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .1));
+        -o-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .1));
+        transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .1));
+    }
+    .bottomright {
+        bottom: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
+        right: calc(calc(calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
+        -webkit-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .13));
+        -moz-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .13));
+        -ms-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .13));
+        -o-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .13));
+        transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .13));
+    }
+    .topright, .toggle {
+        display: block;
     }
     .gridContainer {
-        margin: 0 25vw 0 25vw;
+        margin: 0 var(--margin) 0 var(--margin);
         grid-template-columns: repeat(var(--gridWidth), calc(var(--viewWidth) / var(--gridWidth)));
         grid-template-rows: repeat(146, calc(var(--viewWidth) / var(--gridWidth)));
     }
-    /*
     .containerInfo, .containerImpressum {
-        margin: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2.6) calc(calc(var(--viewWidth) / var(--gridWidth)) * 1) calc(calc(var(--viewWidth) / var(--gridWidth)) * 2.45) calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
+        margin: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2.6) calc(calc(calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin)) calc(calc(var(--viewWidth) / var(--gridWidth)) * 2.45) calc(calc(calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
     }
-    */
     .containerSection {
         width: calc(calc(var(--viewWidth) / var(--gridWidth)) * 13.5);
         position: relative;
@@ -630,28 +697,49 @@ a:hover, svg:hover {
         -o-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * 1));
         transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * 1));
     }
-    .parallaxFontLarge {
+    .parallaxfontL {
         font-size: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1.8);
         line-height: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2);
         margin-bottom: calc(calc(var(--viewWidth) / var(--gridWidth)) * .5);
+        /*
+        -webkit-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .38));
+        -moz-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .38));
+        -ms-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .38));
+        -o-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .38));
+        transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .38));
+        */
     }
-    .fontMedium, .parallaxFontMedium {
+    .fontM, .parallaxfontM {
         font-size: calc(calc(var(--viewWidth) / var(--gridWidth)) * .9);
         line-height: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
         margin-bottom: calc(calc(var(--viewWidth) / var(--gridWidth)) * .5);
+        /*
+        -webkit-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .2));
+        -moz-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .2));
+        -ms-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .2));
+        -o-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .2));
+        transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .2));
+        */
     }
-    .fontSmall {
+    .fontS {
         font-size: calc(calc(var(--viewWidth) / var(--gridWidth)) * .45);
         line-height: calc(calc(var(--viewWidth) / var(--gridWidth)) * .5);
         margin-bottom: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
+        /*
+        -webkit-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .1));
+        -moz-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .1));
+        -ms-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .1));
+        -o-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .1));
+        transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .1));
+        */
+    }
+    .lightbox img {
+        max-width: calc(calc(var(--viewWidth) / var(--gridWidth)) * 38);
+        max-height: calc(100vh - calc(var(--viewWidth) / var(--gridWidth)) * 6);
     }
 }
 
-
-
-/* font positioning */
-
-
+/* MOBILE FONT POSITION */
 
 @media only screen and (max-width: 48rem) {
     .parallaxOubliettesA {
@@ -685,6 +773,9 @@ a:hover, svg:hover {
         right: calc(calc(100vw / var(--gridWidth)) * 1);
     }
 }
+
+/* TABLET FONT POSITION */
+
 @media only screen and (min-width: 48rem) and (max-width: 72.5rem) {
     .parallaxOubliettesA {
         width: calc(calc(100vw / var(--gridWidth)) * 8);
@@ -719,6 +810,9 @@ a:hover, svg:hover {
         right: calc(calc(100vw / var(--gridWidth)) * 2);
     }
 }
+
+/* DESKTOP FONT POSITION */
+
 @media only screen and (min-width: 72.5rem) {
     .parallaxOubliettesA {
         top: calc(calc(100vw / var(--gridWidth)) * 40);
@@ -753,63 +847,53 @@ a:hover, svg:hover {
     }
 }
 
+/* ULTRAWIDE FONT POSITION */
 
-
-
-/* widescreens */
 @media only screen and (min-width: 72.5rem) and (min-aspect-ratio: 21/9) {
+    :root {
+        --margin: 25vw;
+    }
     .parallaxOubliettesA {
-        margin: 0 25vw 0 25vw;
-        
+        margin: 0 var(--margin) 0 var(--margin);
         top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 40);
         left: calc(calc(var(--viewWidth) / var(--gridWidth)) * 31);
     }
     .parallaxOubliettesB {
-        margin: 0 25vw 0 25vw;
-
+        margin: 0 var(--margin) 0 var(--margin);
         width: calc(calc(var(--viewWidth) / var(--gridWidth)) * 26);
         top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 43);
         left: calc(calc(var(--viewWidth) / var(--gridWidth)) * 17);
     }
     .parallaxOubliettesC {
-        margin: 0 25vw 0 25vw;
-
+        margin: 0 var(--margin) 0 var(--margin);
         width: calc(calc(var(--viewWidth) / var(--gridWidth)) * 26);
         top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 50);
         left: calc(calc(var(--viewWidth) / var(--gridWidth)) * 17);
     }
     .parallaxBuechehofA {
-        margin: 0 25vw 0 25vw;
-
+        margin: 0 var(--margin) 0 var(--margin);
         top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 156);
         left: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
     }
     .parallaxBuechehofB {
-        margin: 0 25vw 0 25vw;
-
+        margin: 0 var(--margin) 0 var(--margin);
         width: calc(calc(var(--viewWidth) / var(--gridWidth)) * 24);
         top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 159);
         left: calc(calc(var(--viewWidth) / var(--gridWidth)) * 3);
     }
     .parallaxCasaIbossimA {
-        margin: 0 25vw 0 25vw;
-
+        margin: 0 var(--margin) 0 var(--margin);
         top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 233);
         right: calc(calc(var(--viewWidth) / var(--gridWidth)) * 11);
     }
     .parallaxCasaIbossimB {
-        margin: 0 25vw 0 25vw;
-
+        margin: 0 var(--margin) 0 var(--margin);
         top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 236);
         right: calc(calc(var(--viewWidth) / var(--gridWidth)) * 11);
     }
 }
 
-
-
-/* image positioning */
-
-
+/* MOBILE IMAGE POSITION */
 
 @media only screen and (max-width: 48rem) {
     .gridItem000 {
@@ -927,6 +1011,9 @@ a:hover, svg:hover {
         background: url("../assets/asset_027.jpg");
     }
 }
+
+/* TABLET IMAGE POSITION */
+
 @media only screen and (min-width: 48rem) and (max-width: 72.5rem) {
     /* take values from desktop,
     add 1 to x
@@ -953,6 +1040,9 @@ a:hover, svg:hover {
         background: url("../assets/asset_006.jpg");
     }
 }
+
+/* DESKTOP / ULTRAWIDE IMAGE POSITION */
+
 @media only screen and (min-width: 72.5rem) {
     .gridItem000 {
         grid-column: 32 / 42;
@@ -1066,10 +1156,7 @@ a:hover, svg:hover {
     }
 }
 
-
-/* debug */
-
-
+/* DEBUG */
 
 .debugCenter {
     height: 1px;
@@ -1081,10 +1168,7 @@ a:hover, svg:hover {
     z-index: 100 !important;
     outline: 0px dashed black !important;
 }
-
 * {
     background-color: rgba(255, 0, 0, .2);
     outline: 1px dashed black !important;
 }
-
-
