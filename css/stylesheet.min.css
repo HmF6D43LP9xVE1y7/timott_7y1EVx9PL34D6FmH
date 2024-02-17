@@ -232,7 +232,7 @@ a:hover, svg:hover {
 
 /* MOBILE */
 
-@media only screen and (max-width: 48rem) {
+@media only screen and (max-width: 767px) {
     :root {
         --gridWidth: 16;
     }
@@ -341,7 +341,7 @@ a:hover, svg:hover {
 
 /* EXCEPT MOBILE */
 
-@media only screen and (min-width: 48rem) {
+@media only screen and (min-width: 768px) {
     [class^="gridItem"] {
         background-color: transparent;
         background-blend-mode: multiply;
@@ -353,7 +353,7 @@ a:hover, svg:hover {
 
 /* TABLET */
 
-@media only screen and (min-width: 48rem) and (max-width: 72.5rem) {
+@media only screen and (min-width: 768px) and (max-width: 1160px) {
     :root {
         --gridWidth: 46;
     }
@@ -473,7 +473,7 @@ a:hover, svg:hover {
 
 /* DESKTOP */
 
-@media only screen and (min-width: 72.5rem) {
+@media only screen and (min-width: 1160px) {
     :root {
         --gridWidth: 44;
     }
@@ -610,7 +610,7 @@ a:hover, svg:hover {
 
 /* ULTRAWIDE */
 
-@media only screen and (min-width: 72.5rem) and (min-aspect-ratio: 21/9) {
+@media only screen and (min-width: 1160px) and (min-aspect-ratio: 21/9) {
     :root {
         --gridWidth: 44;
         --viewWidth: 50vw;
@@ -741,7 +741,7 @@ a:hover, svg:hover {
 
 /* MOBILE FONT POSITION */
 
-@media only screen and (max-width: 48rem) {
+@media only screen and (max-width: 767px) {
     .parallaxOubliettesA {
         top: calc(calc(100vw / var(--gridWidth)) * 47);
         left: calc(calc(100vw / var(--gridWidth)) * 1);
@@ -776,7 +776,7 @@ a:hover, svg:hover {
 
 /* TABLET FONT POSITION */
 
-@media only screen and (min-width: 48rem) and (max-width: 72.5rem) {
+@media only screen and (min-width: 768px) and (max-width: 1160px) {
     .parallaxOubliettesA {
         width: calc(calc(100vw / var(--gridWidth)) * 8);
         top: calc(calc(100vw / var(--gridWidth)) * 40);
@@ -813,7 +813,7 @@ a:hover, svg:hover {
 
 /* DESKTOP FONT POSITION */
 
-@media only screen and (min-width: 72.5rem) {
+@media only screen and (min-width: 1160px) {
     .parallaxOubliettesA {
         top: calc(calc(100vw / var(--gridWidth)) * 40);
         left: calc(calc(100vw / var(--gridWidth)) * 31);
@@ -849,7 +849,7 @@ a:hover, svg:hover {
 
 /* ULTRAWIDE FONT POSITION */
 
-@media only screen and (min-width: 72.5rem) and (min-aspect-ratio: 21/9) {
+@media only screen and (min-width: 1160px) and (min-aspect-ratio: 21/9) {
     :root {
         --margin: 25vw;
     }
@@ -895,7 +895,7 @@ a:hover, svg:hover {
 
 /* MOBILE IMAGE POSITION */
 
-@media only screen and (max-width: 48rem) {
+@media only screen and (max-width: 767px) {
     .gridItem000 {
         grid-column: 4 / 14;
         grid-row: 4 / 18;
@@ -1014,7 +1014,7 @@ a:hover, svg:hover {
 
 /* TABLET IMAGE POSITION */
 
-@media only screen and (min-width: 48rem) and (max-width: 72.5rem) {
+@media only screen and (min-width: 768px) and (max-width: 1160px) {
     /* take values from desktop,
     add 1 to x
     add 3 to y
@@ -1043,12 +1043,22 @@ a:hover, svg:hover {
 
 /* DESKTOP / ULTRAWIDE IMAGE POSITION */
 
-@media only screen and (min-width: 72.5rem) {
+@media only screen and (min-width: 1160px) {
     .gridItem000 {
         grid-column: 32 / 42;
         grid-row: 4 / 18;
         background: url("../assets/asset_000.jpg");
     }
+
+
+
+                .gridItem000:hover {
+                    transform:scale(110%) !important;
+                    transition: all .1s;
+                }
+
+
+
     .gridItem001 {
         grid-column: 16 / 30;
         grid-row: 6 / 16;
