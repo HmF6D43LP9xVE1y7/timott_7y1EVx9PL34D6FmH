@@ -111,15 +111,12 @@ svg {
     position: absolute;
     stroke: black;
 }
-a, svg, .redirectInitial {
+a, svg, .redirect {
     pointer-events: all;
 }
-a:hover, svg:hover, .redirectInitial:hover {
+a:hover, svg:hover, .redirect:hover {
     opacity: .3;
     cursor: pointer;
-}
-.redirectTransition {
-    opacity: 0;
 }
 .topright, .bottomright {
     text-align: right;
