@@ -58,6 +58,11 @@
     padding: 0;
     margin: 0;
     border: 0;
+    -webkit-transition: opacity .3s ease;
+    -moz-transition: opacity .3s ease;
+    -ms-transition: opacity .3s ease;
+    -o-transition: opacity .3s ease;
+    transition: opacity .3s ease;
     -ms-overflow-style: none;
     scrollbar-width: none;
     -webkit-user-select: none;
@@ -106,17 +111,15 @@ svg {
     position: absolute;
     stroke: black;
 }
-a, svg {
-    -webkit-transition: opacity .3s ease;
-    -moz-transition: opacity .3s ease;
-    -ms-transition: opacity .3s ease;
-    -o-transition: opacity .3s ease;
-    transition: opacity .3s ease;
+a, svg, .redirectInitial {
     pointer-events: all;
 }
-a:hover, svg:hover {
+a:hover, svg:hover, .redirectInitial:hover {
     opacity: .3;
     cursor: pointer;
+}
+.redirectTransition {
+    opacity: 0;
 }
 .topright, .bottomright {
     text-align: right;
@@ -1053,16 +1056,6 @@ a:hover, svg:hover {
         grid-row: 4 / 18;
         background: url("../assets/asset_000.jpg");
     }
-
-
-
-                .gridItem000:hover {
-                    transform:scale(110%) !important;
-                    transition: all .1s;
-                }
-
-
-
     .gridItem001 {
         grid-column: 16 / 30;
         grid-row: 6 / 16;
@@ -1170,7 +1163,8 @@ a:hover, svg:hover {
     }
 }
 
-/* DEBUG */
+
+/* DEBUG *//*
 
 .debugCenter {
     height: 1px;
