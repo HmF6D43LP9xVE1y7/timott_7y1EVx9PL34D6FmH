@@ -143,22 +143,15 @@ a:hover, svg:hover, .redirect:hover {
     cursor: pointer !important;
 }
 .observed {
-    /*
-    -webkit-transition: background-color 0.3s ease, transform 1s ease, opacity 1s ease;
-    -moz-transition: background-color 0.3s ease, transform 1s ease, opacity 1s ease;
-    -ms-transition: background-color 0.3s ease, transform 1s ease, opacity 1s ease;
-    -o-transition: background-color 0.3s ease, transform 1s ease, opacity 1s ease;
-    transition: background-color 0.3s ease, transform 1s ease, opacity 1s ease;
-    */
     opacity: 0;
 }
-.observedVisible {
+.observedVis {
     -webkit-transform: none !important;
     -moz-transform: none !important;
     -ms-transform: none !important;
     -o-transform: none !important;
     transform: none !important;
-    opacity: 1 !important;
+    opacity: 1;
 }
 .containerSection {
     position: absolute;
@@ -1160,15 +1153,6 @@ a:hover, svg:hover, .redirect:hover {
         grid-row: 132 / 142;
         background: url("../assets/asset_027.jpg");
     }
-}
-
-/* page fadein stuff */
-
-.hidden {
-    opacity: 0;
-}
-.visible {
-    opacity: 1;
 }
 
 /* DEBUG *//*
