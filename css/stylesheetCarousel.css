@@ -1,0 +1,148 @@
+.jsCarousel {
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+    height: 100dvh; /* dvh instead of vh */
+  }
+  .jsCarousel > ul {
+    list-style: none;
+    width: 1000%;
+    height: 100dvh; /* dvh instead of vh */
+  }
+  .jsCarousel > ul li {
+    display: inline-block;
+    float: left;
+    width: 100vw;
+    height: 100dvh; /* dvh instead of vh */
+  }
+  .jsCarousel .jsCarousel-arrowPrev, .jsCarousel .jsCarousel-arrowNext {
+    font-family: "Bootstrap-icons";
+    background: transparent;
+    color: black;
+    cursor: pointer;
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    font-size: 3rem;
+  }
+  .jsCarousel .jsCarousel-arrowPrev:hover, .jsCarousel .jsCarousel-arrowNext:hover {
+    opacity: .3;
+  }
+  .jsCarousel .jsCarousel-arrowPrev {
+    left: 1.5rem;
+  }
+  .jsCarousel .jsCarousel-arrowNext {
+    right: 1.5rem;
+  }
+  .jsCarousel .jsCarousel-dots {
+    display: inline-block;
+    height: 3rem;
+    position: absolute;
+    width: auto;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: .5rem;
+  }
+  .jsCarousel .jsCarousel-dots li {
+    background: black;
+    border-radius: 1rem;
+    display: inline-block;
+    margin: 0 .5rem;
+    height: .5rem;
+    width: .5rem;
+  }
+  .jsCarousel .jsCarousel-dots li.is-active {
+    height: 1rem;
+    width: 1rem;
+    transform: translateY(-.25rem);
+  }
+  /*s
+  .jsCarousel .jsCarousel-dots li:hover {
+    background: white;
+    box-shadow: 0 0 3px 3px #ddd;
+  }
+  /*
+  .jsCarousel .jsCarousel-btnStop,
+  .jsCarousel .jsCarousel-btnPlay {
+    background: white;
+    border: 0;
+    cursor: pointer;
+    height: 2.25em;
+    position: absolute;
+    bottom: 1em;
+    left: 2em;
+    text-align: center;
+    width: 5em;
+    transition: all 0.2s ease;
+  }
+  .jsCarousel .jsCarousel-btnStop:hover,
+  .jsCarousel .jsCarousel-btnPlay:hover {
+    background: #f5f5f5;
+  }
+  .jsCarousel .jsCarousel-btnStop {
+    left: 100px;
+  }
+  
+  /* mobile */
+
+@media only screen and (max-width: 767px) {
+  .jsCarousel .jsCarousel-arrowPrev, .jsCarousel .jsCarousel-arrowNext {
+    bottom: 2rem;
+  }
+  .jsCarousel .jsCarousel-dots {
+    bottom: 3rem;
+  }
+}
+
+/* tablet and above */
+
+@media only screen and (min-width: 768px) {
+  .jsCarousel .jsCarousel-arrowPrev, .jsCarousel .jsCarousel-arrowNext {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .jsCarousel .jsCarousel-dots {
+    bottom: 3rem;
+  }
+}
+
+
+
+#oubliettes0 {
+  content: url('../assets/asset_000.jpg') !important;
+  background-position: center;
+  background-size: cover;
+}
+#oubliettes1 {
+  content: url('../assets/asset_001.jpg') !important;
+  background-position: center;
+  background-size: cover;
+}
+#oubliettes2 {
+  content: url('../assets/asset_002.jpg') !important;
+  background-position: center;
+  background-size: cover;
+}
+#oubliettes3 {
+  content: url('../assets/asset_000.jpg') !important;
+  background-position: center;
+  background-size: cover;
+}
+#oubliettes4 {
+  content: url('../assets/asset_001.jpg') !important;
+  background-position: center;
+  background-size: cover;
+}
+#oubliettes5 {
+  content: url('../assets/asset_002.jpg') !important;
+  background-position: center;
+  background-size: cover;
+}
