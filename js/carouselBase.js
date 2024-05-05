@@ -1,47 +1,37 @@
-/**
- * Vanilla Javascript Carousel v3.1.2
- * https://zoltantothcom.github.io/vanilla-jsCarousel
- */
+// Vanilla Javascript Carousel v3.1.2
+// https://zoltantothcom.github.io/vanilla-jsCarousel
+
 function Carousel(n) {
     var i = document.getElementById(n.elem || "Carousel"),
         e = n.interval || 3e3,
+/*
         r = n.btnPlayText || "Play",
         l = n.btnStopText || "Stop",
+*/
         a = n.arrNextText || "\uF285",
         o = n.arrPrevText || "\uF284",
         u = "jsCarousel",
         c = "jsCarousel-arrowPrev",
         s = "jsCarousel-arrowNext",
         d = "jsCarousel-dots",
+/*
         f = "jsCarousel-btnStop",
         v = "jsCarousel-btnPlay",
-        p = i
-            .querySelectorAll("li")
-            .length,
+*/
+        p = i.querySelectorAll("li").length,
         L = 0,
         t = null;
     function m(e, t, n) {
         var r = i.querySelectorAll("." + u + " > ul li")[e];
         r.style.marginLeft = t,
-        i
-            .querySelector("." + u + " > ul")
-            .removeChild(r),
-        i
-            .querySelector("." + u + " > ul")
-            .insertAdjacentHTML(n, r.outerHTML)
+        i.querySelector("." + u + " > ul").removeChild(r),
+        i.querySelector("." + u + " > ul").insertAdjacentHTML(n, r.outerHTML)
     }
     function y() {
-        []
-            .forEach
-            .call(i.querySelectorAll("." + d + " li"), function (e) {
-                e
-                    .classList
-                    .remove("is-active")
+        [].forEach.call(i.querySelectorAll("." + d + " li"), function (e) {
+                e.classList.remove("is-active")
             }),
-        i
-            .querySelectorAll("." + d + " li")[L]
-            .classList
-            .add("is-active")
+        i.querySelectorAll("." + d + " li")[L].classList.add("is-active")
     }
     function h(e) {
         e.style.marginLeft = ""
@@ -106,13 +96,10 @@ function Carousel(n) {
     }
     return 1 < p && function () {
         var e = {
-            
             dots: function () {
                 return function () {
                     var e = document.createElement("ul");
-                    e
-                        .classList
-                        .add(d)
+                    e.classList.add(d)
 /*
                     e.addEventListener("click", function (e) {
                         "LI" === e.target.tagName && (C(e.target.getAttribute("data-position")), A())
@@ -131,14 +118,10 @@ function Carousel(n) {
                 return function () {
                     var e = document.createElement("button");
                     e.innerHTML = o,
-                    e
-                        .classList
-                        .add(c);
+                    e.classList.add(c);
                     var t = document.createElement("button");
                     t.innerHTML = a,
-                    t
-                        .classList
-                        .add(s),
+                    t.classList.add(s),
                     e.addEventListener("click", S),
                     t.addEventListener("click", q),
                     i.appendChild(e),

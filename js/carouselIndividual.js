@@ -3,8 +3,10 @@ var carousel = new Carousel({
     dots: true, // show nav dots
     arrows: true, // show nav arrows
     infinite: true, // is infinite
-    initial: 0, // initial slides
+    initial: 0, // initial slide
+/*
     buttons: false, // autoplay buttons
     interval: 2000, // autplay interval in ms
     autoplay: false, // autoplay
+*/
 })
