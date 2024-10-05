@@ -81,6 +81,25 @@ body {
 .indent {
     text-indent: calc(calc(100vw / var(--gridWidth)) * 2);
 }
+
+
+
+
+
+
+
+/* indent, p amount = which line ) */
+
+p + p {
+    text-indent: calc(calc(100vw / var(--gridWidth)) * 2);
+}
+
+
+
+
+
+
+
 .alignRight {
     position: fixed;
     text-align: right;

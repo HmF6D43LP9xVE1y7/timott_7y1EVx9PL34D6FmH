@@ -8,8 +8,8 @@ function Carousel(n) {
         r = n.btnPlayText || "Play",
         l = n.btnStopText || "Stop",
 */
-        a = n.arrNextText || "\uF285",
-        o = n.arrPrevText || "\uF284",
+        a = n.arrNextText || "",
+        o = n.arrPrevText || "",
         u = "jsCarousel",
         c = "jsCarousel-arrowPrev",
         s = "jsCarousel-arrowNext",
@@ -117,7 +117,7 @@ function Carousel(n) {
             arrows: function () {
                 return function () {
                     var e = document.createElement("button");
-                    e.innerHTML = o,
+                    e.innerHTML = o, /* e.appendChild(createSVGClose()); */
                     e.classList.add(c);
                     var t = document.createElement("button");
                     t.innerHTML = a,
@@ -174,3 +174,38 @@ function Carousel(n) {
         stop: T
     }
 }
+function createSVGClose() {
+    const svgClose = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svgClose.setAttribute('class', 'navTR')
+    svgClose.setAttribute("viewBox", "-1 -1 18 17.5");
+    const svgClosePath = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    svgClosePath.setAttribute("d", "M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z");
+    svgClose.appendChild(svgClosePath);
+    return svgClose;
+}
+function createSVGPrev() {
+    const svgPrev = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svgPrev.setAttribute('class', 'navCL')
+    svgPrev.setAttribute("viewBox", "-1 -1 18 17.5");
+    const svgPrevPath = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    svgPrevPath.setAttribute("fill-rule", "evenodd");
+    svgPrevPath.setAttribute("d", "M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z");
+    svgPrev.appendChild(svgPrevPath);
+    return svgPrev;
+}
+function createSVGNext() {
+    const svgNext = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svgNext.setAttribute('class', 'navCR')
+    svgNext.setAttribute("viewBox", "-1 -1 18 17.5");
+    const svgNextPath = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    svgNextPath.setAttribute("fill-rule", "evenodd");
+    svgNextPath.setAttribute("d", "M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z");
+    svgNext.appendChild(svgNextPath);
+    return svgNext;
+}
+document.body.appendChild(createSVGClose());
+document.body.appendChild(createSVGPrev());
+document.body.appendChild(createSVGNext());
+
+
+

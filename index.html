@@ -98,11 +98,12 @@
 					oubliettes
 				</div>
 				<div class="parallaxFont parallaxfontM parallaxOubliettesB">
-					Das Konzept der Liminalität wie es in Computerspielen oftmals, wenn auch teils unabsichtlich, zum Ausdruck einer unheimlichen Stimmung eingesetzt wird, beschreibt Orte an welchen es durch die Abwesenheit von Menschen an einer Identifikation zur Umgebung fehlt. Charakterisiert etwa durch den Geruch von nassem Beton oder dem Summen von Leuchtstoffröhren, können solche Räume Gefühle der Verlorenheit, Unsicherheit oder gar Nostalgie hervorrufen.
-				</div>
-				<div class="parallaxFont parallaxfontM parallaxOubliettesC indent">
-					In diesem Bezug stellt meine Arbeit Infrastruktur dar, deren Existenz und bedeutender Beitrag zur heutigen Gesellschaft teils in Vergessenheit gerät und der fehlende Massstab zum Vertrauten die Räumlichkeiten aus der Realität zu heben scheint.<br><br>Abschlussarbeit zum Fotograf EFZ<br>F+F Schule für Kunst und Design
-				</div>
+					<p>
+						Das Konzept der Liminalität wie es in Computerspielen oftmals, wenn auch teils unabsichtlich, zum Ausdruck einer unheimlichen Stimmung eingesetzt wird, beschreibt Orte an welchen es durch die Abwesenheit von Menschen an einer Identifikation zur Umgebung fehlt. Charakterisiert etwa durch den Geruch von nassem Beton oder dem Summen von Leuchtstoffröhren, können solche Räume Gefühle der Verlorenheit, Unsicherheit oder gar Nostalgie hervorrufen.
+					</p>
+					<p>
+						In diesem Bezug stellt meine Arbeit Infrastruktur dar, deren Existenz und bedeutender Beitrag zur heutigen Gesellschaft teils in Vergessenheit gerät und der fehlende Massstab zum Vertrauten die Räumlichkeiten aus der Realität zu heben scheint.<br><br>Abschlussarbeit zum Fotograf EFZ<br>F+F Schule für Kunst und Design
+					</p>
 				<div class="parallaxFont parallaxfontL parallaxBuechehofA">
 					Ersatzneubau Buechehof
 				</div>
@@ -160,6 +161,26 @@
 		<script src="js/fader.min.js">
 		</script>
 
+
+		<script>
+			var imgs = document.images,
+			len = imgs.length,
+			counter = 0;
+
+			[].forEach.call( imgs, function( img ) {
+				if(img.complete)
+				incrementCounter();
+				else
+				img.addEventListener( 'load', incrementCounter, false );
+			} );
+
+			function incrementCounter() {
+				counter++;
+				if ( counter === len ) {
+					console.log( 'All images loaded!' );
+				}
+			}
+		</script>
 
 
 		<script src="js/carouselBase.js"></script>
