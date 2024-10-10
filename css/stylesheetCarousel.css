@@ -36,7 +36,6 @@
   }
   .jsCarousel .jsCarousel-dots {
     display: inline-block;
-    height: 3rem;
     position: absolute;
     width: auto;
     left: 50%;
@@ -52,12 +51,12 @@
     border-radius: 1rem;
     display: inline-block;
     margin: 0 .5rem;
-    height: .5rem;
-    width: .5rem;
+    height: .25rem;
+    width: .25rem;
   }
   .jsCarousel .jsCarousel-dots li.is-active {
-    height: 1.5rem;
-    transform: translateY(-.5rem);
+    height: .75rem;
+    transform: translateY(-.25rem);
   }
   /*s
   .jsCarousel .jsCarousel-dots li:hover {

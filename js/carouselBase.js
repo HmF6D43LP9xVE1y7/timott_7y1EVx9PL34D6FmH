@@ -176,7 +176,7 @@ function Carousel(n) {
 }
 function createSVGClose() {
     const svgClose = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-    svgClose.setAttribute('class', 'navTR')
+    svgClose.setAttribute("class", "navTR")
     svgClose.setAttribute("viewBox", "-1 -1 18 17.5");
     const svgClosePath = document.createElementNS("http://www.w3.org/2000/svg", "path");
     svgClosePath.setAttribute("d", "M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z");
@@ -185,7 +185,7 @@ function createSVGClose() {
 }
 function createSVGPrev() {
     const svgPrev = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-    svgPrev.setAttribute('class', 'navCL')
+    svgPrev.setAttribute("class", "navCL")
     svgPrev.setAttribute("viewBox", "-1 -1 18 17.5");
     const svgPrevPath = document.createElementNS("http://www.w3.org/2000/svg", "path");
     svgPrevPath.setAttribute("fill-rule", "evenodd");
@@ -195,7 +195,7 @@ function createSVGPrev() {
 }
 function createSVGNext() {
     const svgNext = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-    svgNext.setAttribute('class', 'navCR')
+    svgNext.setAttribute("class", "navCR")
     svgNext.setAttribute("viewBox", "-1 -1 18 17.5");
     const svgNextPath = document.createElementNS("http://www.w3.org/2000/svg", "path");
     svgNextPath.setAttribute("fill-rule", "evenodd");
@@ -209,3 +209,47 @@ document.body.appendChild(createSVGNext());
 
 
 
+
+
+
+/* timo hlubek   https://timohlubek.com/public/global.js 
+
+
+
+const imgNumber = document.getElementById("lightbox-img-nr");
+function openLightbox(imgUrl, index) {
+    currentIndex = index;
+    lightboxImg.setAttribute("src", imgUrl);
+    lightbox.style.display = "flex";
+    lightboxImg.style.objectFit = "contain";
+    imagesArray = Array.from(triggerElements).map((trigger) => trigger.getAttribute("src"));
+    updateImageNumber();
+  }
+  function navigateImages(direction) {
+    currentIndex += direction;
+    if (currentIndex < 0) {
+      currentIndex = imagesArray.length - 1;
+    } else if (currentIndex >= imagesArray.length) {
+      currentIndex = 0;
+    }
+    const imgUrl = imagesArray[currentIndex];
+    lightboxImg.setAttribute("src", imgUrl);
+    updateImageNumber();
+  }
+  function updateImageNumber() {
+    imgNumber.textContent = `${currentIndex + 1} / ${imagesArray.length}`;
+  }
+
+  <div class="lightbox" id="lightbox">
+  <button class="close-btn" id="close-btn">close</button>
+  <img src="" alt="Lightbox Image" class="lightbox-img" id="lightbox-img" draggable="false" loading="lazy">
+  <div class="lightbox-controls">
+    <button class="prev-btn" id="prev-btn">←</button>
+    <p class="lightbox-count" id="lightbox-img-nr">[1/12]</p>
+    <button class="next-btn" id="next-btn">→</button>
+  </div>
+</div>
+
+
+
+*/
